@@ -1,0 +1,51 @@
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.datacontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img{
+    width: 30%; /* siento que esto no se aplica*/
+    height: 30%; /* idem ^^ */
+    padding-right: 30px;
+}
+
+.right{
+    rotate: 180deg;
+}
+
+.title{
+    font-family: 'TANMERINGUE';
+    color: #f4e5da;
+    font-size: 70px;
+    margin: 0;
+}
+
+.subtitle{
+    font-family: 'tanpearl';
+    color: #f4e5da;
+}
+
+.button{
+    font-family: 'tanpearl';
+    color: #201610;
+    background-color: #999f50;
+    width: 20%;
+    padding: 10px;
+    border-radius: 100px;
+    cursor: pointer;
+    align-self: center;
+}
+
+.button:hover{
+    background-color: #676b35;
+}

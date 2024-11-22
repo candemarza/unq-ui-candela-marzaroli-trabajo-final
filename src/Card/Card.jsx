@@ -1,10 +1,10 @@
-const Card = ({num}) => {
-    return (
-        <div>
-        <p>{num}</p>    
-        <p>Soy una card :)</p>
-        </div>
-    );
-    }
+const Card = ({ num }) => {
+  return (
+    <div>
+      <p>Soy una card :)</p>
+      <p>{num}</p>
+    </div>
+  );
+};
 
 export default Card;
