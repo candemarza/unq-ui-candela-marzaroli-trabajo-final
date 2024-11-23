@@ -1,0 +1,10 @@
+.board{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    width: 600px;
+}
+
+.score{
+ font-size: 30px;
+}

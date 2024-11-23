@@ -40,7 +40,7 @@ const Game = () => {
   return (
     <div>
       <Board list={list} />
-      <div onClick={(goHome)}>Go home</div>
+      <button onClick={(goHome)}>Go home</button>
     </div>
   );
 };
