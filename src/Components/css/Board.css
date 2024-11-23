@@ -1,10 +1,12 @@
 .board{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px;
-    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 500px;
+    gap: 12px;
 }
 
 .score{
  font-size: 30px;
+ margin: 0;
 }

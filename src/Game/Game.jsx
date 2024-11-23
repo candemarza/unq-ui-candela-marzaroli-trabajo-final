@@ -1,41 +1,52 @@
 import React from "react";
 import Board from "../Components/Board";
-
 import {useNavigate} from "react-router-dom";
+import "./Game.css";
+
 
 const Game = () => {
-  //mejor que sea facil: colores clasicos
-  //medium colores mas niche(?) pero distinos
-  //dificil colores similares
 
-  /*  const list = [
-    { colorName: "Red",     hex: "#FF0000" },
-    { colorName: "Orange",  hex: "#FFA500" },
-    { colorName: "Yellow",  hex: "#FFFF00" },
-    { colorName: "Green",   hex: "#008000" },
-    { colorName: "Blue",    hex: "#0000FF" },
-    { colorName: "Purple",  hex: "#800080" },
-    { colorName: "Magenta", hex: "#FF00FF" },
-    { colorName: "Black",   hex: "#000000"}
-  ]; 
+const colorHexDictionary = {
+  Red: "#FF0000",
+  Orange: "#FFA500",
+  Yellow: "#FFFF00",
+  Green: "#008000",
+  Cyan: "#00FFFF",
+  Blue: "#0000FF",
+  Purple: "#800080",
+  Magenta: "#FF00FF",
+  SlateGray: "#708090",
+  FireBrick: "#B22222",
+  Khaki: "#F0E68C",
+  YellowGreen: "#9ACD32",
+  DarkCyan: "#008B8B",
+  RoyalBlue: "#4169E1",
+  RebeccaPurple: "#663399",
+  Orchid: "#DA70D6",
+  LightCoral: "#F08080",
+  Tomato: "#FF6347",
+  GhostWhite: "#F8F8FF",
+  SpringGreen: "#00FF7F",
+  DarkTurquoise: "#00CED1",
+  MidnightBlue: "#191970",
+  MediumPurple: "#9370DB",
+  MediumVioletRed: "#C71585"
+};
 
-*/
+//recibir como query param la dificultad
+const difficulty = "hard";
 
-  const list = [
-    "Red",
-    "Orange",
-    "Yellow",
-    "Green",
-    "Blue",
-    "Purple",
-    "Magenta",
-    "Black",
-  ];
+//es solo lso colores nombres x ahora 
+const easyList = Object.keys(colorHexDictionary).slice(0, 8);
+const mediumList = Object.keys(colorHexDictionary).slice(0, 16);
+const hardList = Object.keys(colorHexDictionary).slice(0, 24);
 
-  //toda la logica de elegir modo de juego seria mandarle
-  //la lista que corresponda acorde a botones
-  //y para 2 jugadores mandarle un bool de 1 jug
+const list = difficulty === "easy" ? easyList : difficulty === "medium" ? mediumList : hardList;
+//ta raro no mg ^^
 
+//recibir como query param el numero de jugadores
+
+console.log(list);
 
   const navigate = useNavigate();
   const goHome = () => {
@@ -45,7 +56,7 @@ const Game = () => {
   return (
     <div>
       <Board list={list} />
-      <div className="button" onClick={goHome}> Play</div>
+      <div className="button" onClick={goHome}>go home</div>
     </div>
   );
 };

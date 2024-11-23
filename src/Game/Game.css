@@ -1,24 +1,15 @@
-body {
-    background-image: url('../assets/back-2.png'); /*no cambio el fondo?/
+/*body {
+    background-image: url('../assets/back-2.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    /*agregarle mas mierdas al fondo asi se ve mas interesante*/
 }
 
 
 /*temporal xq despues va a un modal cuando termino el juego*/
 .button{
-    font-family: 'tanpearl';
-    color: #0d002e;
-    background-color: #7acfdf;
-    width: 50px;
-    border-radius: 100px;
-    cursor: pointer;
-    box-shadow: 4px 4px #0d002e7a;
-}
+    
+    background-color: #f169df;
 
-.button:hover{
-    background-color: #40a4b8;
-    box-shadow: 4px 4px #0d002ebb;
+    
 }
