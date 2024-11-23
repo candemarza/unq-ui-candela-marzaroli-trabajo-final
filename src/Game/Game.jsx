@@ -1,9 +1,9 @@
 import React from "react";
 import Board from "../Components/Board";
+
 import {useNavigate} from "react-router-dom";
 
 const Game = () => {
-  //ver como elegir parametros de tamaño
   //mejor que sea facil: colores clasicos
   //medium colores mas niche(?) pero distinos
   //dificil colores similares
@@ -32,6 +32,11 @@ const Game = () => {
     "Black",
   ];
 
+  //toda la logica de elegir modo de juego seria mandarle
+  //la lista que corresponda acorde a botones
+  //y para 2 jugadores mandarle un bool de 1 jug
+
+
   const navigate = useNavigate();
   const goHome = () => {
     navigate("/");
@@ -40,7 +45,7 @@ const Game = () => {
   return (
     <div>
       <Board list={list} />
-      <button onClick={(goHome)}>Go home</button>
+      <div className="button" onClick={goHome}> Play</div>
     </div>
   );
 };

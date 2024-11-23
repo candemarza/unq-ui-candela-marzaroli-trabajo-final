@@ -3,6 +3,10 @@ import { useState, useEffect } from "react";
 import "./css/Board.css"
 import Card from "./Card";
 
+
+//para 2 jug recibir un bool y cada vez que cardFlipped es null cambiar de jug?
+//ir guardando puntaje en dos variables acorde a un bool de turno
+
 const Board = ({list}) => {
   const [shuffledCards, setShuffledCards] = useState([]);
   const [cardFlipped, setCardFlipped] = useState(null);

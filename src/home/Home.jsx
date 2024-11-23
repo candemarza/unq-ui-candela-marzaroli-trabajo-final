@@ -9,10 +9,10 @@ const Home = () => {
   };
 
   return (
-    <div className="container">
-     <div className="datacontainer">
+    <div className="window">
+      <div className="container">
         <h1 className="title">Memotest</h1>
-        <h2 className="subtitle">Encuentra los pares de colores esatndar css y sus codigos hex! </h2>
+        <h2 className="subtitle">Find the matching css standar color and it's hexcode! </h2>
         <div className="button" onClick={goToBoard}> Play</div>
       </div>
     </div>

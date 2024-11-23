@@ -1,40 +1,65 @@
-.container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+body {
+    background-image: url('../assets/back-1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /*agregarle mas mierdas al fondo asi se ve mas interesante*/
 }
 
-.datacontainer{
+.window{
+    background-image: url('../assets/paint-frame-horizontal.png');
+    width: 600px;
+    height: 425px;
+    padding-left: 58px;
+    padding-top: 40px;
+    padding-right: 9px;
+    padding-bottom: 81px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 15px #0d002e;
+    /*filtro para que sea mas vaporwave?*/
+}
+
+.container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(157deg, rgba(64,50,179,1) 0%, rgba(122,88,209,1) 35%, rgba(179,119,210,1) 55%, rgba(245,171,159,1) 97%);
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    
 }
+
 
 .title{
     font-family: 'TANMERINGUE';
-    color: #0d002e;
-    font-size: 70px;
+    color: #e2e2e2;
+    text-shadow: 3px 2px #0d002e;
+    font-size: 50px;
     margin: 0;
 }
 
 .subtitle{
     font-family: 'tanpearl';
-    color: #0d002e;
+    font-size: 20px;
+    color: #e2e2e2;
+    text-shadow: 2px 1px #0d002e;
+    width: 70%;
+    margin: 30px 0px;
 }
 
 .button{
     font-family: 'tanpearl';
     color: #0d002e;
-    background-color: #ca51b0;
-    width: 20%;
-    padding: 10px;
+    background-color: #7acfdf;
+    padding: 10px 30px;
     border-radius: 100px;
     cursor: pointer;
-    align-self: center;
+    box-shadow: 4px 4px #0d002e7a;
 }
 
 .button:hover{
-    background-color: #7e358d;
+    background-color: #40a4b8;
+    box-shadow: 4px 4px #0d002ebb;
 }
