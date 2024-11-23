@@ -10,13 +10,11 @@ const Home = () => {
 
   return (
     <div className="container">
-      <img className="img" src="https://media-public.canva.com/8jaAQ/MAEvOj8jaAQ/1/tl.png" alt="flor" />
-      <div className="datacontainer">
+     <div className="datacontainer">
         <h1 className="title">Memotest</h1>
-        <h2 className="subtitle">Encuentra los pares de la naturaleza!</h2>
+        <h2 className="subtitle">Encuentra los pares de colores esatndar css y sus codigos hex! </h2>
         <div className="button" onClick={goToBoard}> Play</div>
       </div>
-      <img className="img right" src="https://media-public.canva.com/8jaAQ/MAEvOj8jaAQ/1/tl.png" alt="flor" />
     </div>
   );
 };

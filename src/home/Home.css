@@ -1,4 +1,3 @@
-
 .container{
     display: flex;
     flex-direction: row;
@@ -13,32 +12,22 @@
     align-items: center;
 }
 
-.img{
-    width: 30%; /* siento que esto no se aplica*/
-    height: 30%; /* idem ^^ */
-    padding-right: 30px;
-}
-
-.right{
-    rotate: 180deg;
-}
-
 .title{
     font-family: 'TANMERINGUE';
-    color: #f4e5da;
+    color: #0d002e;
     font-size: 70px;
     margin: 0;
 }
 
 .subtitle{
     font-family: 'tanpearl';
-    color: #f4e5da;
+    color: #0d002e;
 }
 
 .button{
     font-family: 'tanpearl';
-    color: #201610;
-    background-color: #999f50;
+    color: #0d002e;
+    background-color: #ca51b0;
     width: 20%;
     padding: 10px;
     border-radius: 100px;
@@ -47,5 +36,5 @@
 }
 
 .button:hover{
-    background-color: #676b35;
+    background-color: #7e358d;
 }
