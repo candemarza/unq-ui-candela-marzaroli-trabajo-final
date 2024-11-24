@@ -1,12 +1,16 @@
-.board{
+.game-container{
     display: flex;
-    flex-wrap: wrap;
+    direction: row;
     justify-content: center;
-    width: 500px;
-    gap: 12px;
+    align-items: center;
+    height: 100vh;
+    padding: none;
+    margin: none;
+    height: 650px;
 }
 
-.score{
- font-size: 30px;
- margin: 0;
+.board{
+    display: grid;
+    grid-gap: 10px;
+    width: 650px;
 }

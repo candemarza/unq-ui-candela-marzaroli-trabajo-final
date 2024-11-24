@@ -2,12 +2,13 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./css/Board.css"
 import Card from "./Card";
+import ScoreBoard from "./ScoreBoard";	
 
 
 //para 2 jug recibir un bool y cada vez que cardFlipped es null cambiar de jug?
 //ir guardando puntaje en dos variables acorde a un bool de turno
 
-const Board = ({list}) => {
+const Board = ({list, size, numOfPlayers}) => {
   const [shuffledCards, setShuffledCards] = useState([]);
   const [cardFlipped, setCardFlipped] = useState(null);
   const [score, setScore] = useState(0);
@@ -60,9 +61,9 @@ const Board = ({list}) => {
   } //deberia de bloquear girar otra carta durante este timeput xq colapsa
 
   return (
-    <div>
-      <h1 className="score" >Score: {score}</h1>
-      <div className="board">
+    <div className="game-container">
+      <ScoreBoard score={score}/>
+      <div className="board"  style={{ gridTemplateColumns: `repeat(${size}, 1fr)` }}>
         {shuffledCards.map((card, index) => {
           return (
             <Card key={index} card={card} handleCardFlip={handleCardFlip} />

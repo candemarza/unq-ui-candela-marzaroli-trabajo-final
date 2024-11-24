@@ -1,7 +1,6 @@
 .card {
     cursor: pointer;
     aspect-ratio: 1 / 1;
-    width: 80px;
 }
 
 .card-front, .card-back {

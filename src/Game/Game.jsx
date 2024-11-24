@@ -15,7 +15,7 @@ const colorHexDictionary = {
   Blue: "#0000FF",
   Purple: "#800080",
   Magenta: "#FF00FF",
-
+  //easy ^^
   SlateGray: "#708090",
   FireBrick: "#B22222",
   Khaki: "#F0E68C",
@@ -24,45 +24,44 @@ const colorHexDictionary = {
   GhostWhite: "#F8F8FF",
   RebeccaPurple: "#663399",
   Orchid: "#DA70D6",
-  RoyalBlue: "#4169E1",
+  MediumVioletRed: "#c71585",
   MidnightBlue: "#191970",
-
-  
+  //medium ^^
   Tomato: "#FF6347",
-  RoyalBlue: "#4169E1",
   SpringGreen: "#00FF7F",
   DarkTurquoise: "#00CED1",
   MediumPurple: "#9370DB",
-  MediumVioletRed: "#C71585",
+  RoyalBlue: "#4169E1",
   SaddleBrown: "#8B4513",
-  //faltan 8 
+  Indigo: "#4B0082",
+  SeaGreen: "#2E8B57",
+  Pink: "#FFBEC2",
+  GoldenRod: "#DAA520",
+  Thisle: "#D8BFD8",
+  LightCoral: "#F08080",
+  OliveDrab: "#6B8E23",
+  Chocolate: "#D2691E"
+  //hard ^^
 };
 
-//recibir como query param la dificultad
+//recibir como query param la dificultad?
 const difficulty = "hard";
 
 //es solo lso colores nombres x ahora 
 const easyList = Object.keys(colorHexDictionary).slice(0, 8);
-const mediumList = Object.keys(colorHexDictionary).slice(0, 16);
-const hardList = Object.keys(colorHexDictionary).slice(0, 24);
+const mediumList = Object.keys(colorHexDictionary).slice(0, 18);
+const hardList = Object.keys(colorHexDictionary).slice(0, 32);
 
+const size = difficulty === "easy" ? 4 : difficulty === "medium" ? 6 : 8;
 const list = difficulty === "easy" ? easyList : difficulty === "medium" ? mediumList : hardList;
-//ta raro no mg ^^
+//ta raro no mg ^^ cambaira choose?
 
-//recibir como query param el numero de jugadores
+//recibir como query param el numero de jugadores?
 const numOfPlayers = 1;
-
-console.log(list);
-
-  const navigate = useNavigate();
-  const goHome = () => {
-    navigate("/");
-  };
 
   return (
     <div>
-      <Board list={list} numOfPlayers={numOfPlayers} />
-      <div className="button" onClick={goHome}>go home</div>
+      <Board size ={size} list={list} numOfPlayers={numOfPlayers} />
     </div>
   );
 };
