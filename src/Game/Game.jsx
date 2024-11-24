@@ -15,22 +15,27 @@ const colorHexDictionary = {
   Blue: "#0000FF",
   Purple: "#800080",
   Magenta: "#FF00FF",
+
   SlateGray: "#708090",
   FireBrick: "#B22222",
   Khaki: "#F0E68C",
   YellowGreen: "#9ACD32",
   DarkCyan: "#008B8B",
-  RoyalBlue: "#4169E1",
+  GhostWhite: "#F8F8FF",
   RebeccaPurple: "#663399",
   Orchid: "#DA70D6",
-  LightCoral: "#F08080",
+  RoyalBlue: "#4169E1",
+  MidnightBlue: "#191970",
+
+  
   Tomato: "#FF6347",
-  GhostWhite: "#F8F8FF",
+  RoyalBlue: "#4169E1",
   SpringGreen: "#00FF7F",
   DarkTurquoise: "#00CED1",
-  MidnightBlue: "#191970",
   MediumPurple: "#9370DB",
-  MediumVioletRed: "#C71585"
+  MediumVioletRed: "#C71585",
+  SaddleBrown: "#8B4513",
+  //faltan 8 
 };
 
 //recibir como query param la dificultad
@@ -45,6 +50,7 @@ const list = difficulty === "easy" ? easyList : difficulty === "medium" ? medium
 //ta raro no mg ^^
 
 //recibir como query param el numero de jugadores
+const numOfPlayers = 1;
 
 console.log(list);
 
@@ -55,7 +61,7 @@ console.log(list);
 
   return (
     <div>
-      <Board list={list} />
+      <Board list={list} numOfPlayers={numOfPlayers} />
       <div className="button" onClick={goHome}>go home</div>
     </div>
   );

@@ -30,7 +30,6 @@ body {
     
 }
 
-
 .title{
     font-family: 'TANMERINGUE';
     color: #e2e2e2;
@@ -45,20 +44,41 @@ body {
     color: #e2e2e2;
     text-shadow: 2px 1px #0d002e;
     width: 70%;
-    margin: 30px 0px;
+    margin: 20px 0px;
 }
+
+.options{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 10px;
+}
+
+.difficulty{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+.numberOfPlayers{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
 
 .button{
     font-family: 'tanpearl';
     color: #0d002e;
-    background-color: #7acfdf;
-    padding: 10px 30px;
+    background-color: #7aa2df;
+    padding: 10px 0px;
     border-radius: 100px;
+    width: 100%;
     cursor: pointer;
     box-shadow: 4px 4px #0d002e7a;
 }
 
 .button:hover{
-    background-color: #40a4b8;
+    background-color: #5a81bb;
     box-shadow: 4px 4px #0d002ebb;
 }

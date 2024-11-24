@@ -28,16 +28,18 @@ const Home = () => {
       <div className="container">
         <h1 className="title">Memotest</h1>
         <h2 className="subtitle">Find the matching css standar color and it's hexcode! </h2>
-        <div className="difficulty">
-          <div className="button" onClick={selectDifficulty("easy")}>Easy</div>
-          <div className="button" onClick={selectDifficulty("medium")}>Medium</div>
-          <div className="button" onClick={selectDifficulty("hard")}>Hard</div>
+         <div className="options"> 
+          <div className="difficulty">
+            <div className="button" onClick={selectDifficulty("easy")}>Easy</div>
+            <div className="button" onClick={selectDifficulty("medium")}>Medium</div>
+            <div className="button" onClick={selectDifficulty("hard")}>Hard</div>
+          </div>
+          <div className="numberOfPlayers">
+            <div className="button" onClick={selectNumberOfPlayers(1)}>1 player</div>
+            <div className="button" onClick={selectNumberOfPlayers(2)}>2 players</div>
+          </div>
+          <div className="button" onClick={goToBoard}>Start Game</div>
         </div>
-        <div className="numberOfPlayers">
-          <div className="button" onClick={selectNumberOfPlayers(1)}>1 player</div>
-          <div className="button" onClick={selectNumberOfPlayers(2)}>2 players</div>
-        </div>
-        <div className="button" onClick={goToBoard}>Start Game</div>
       </div>
     </div>
   );
