@@ -62,7 +62,9 @@ const Board = ({list, size, numOfPlayers}) => {
 
   return (
     <div className="game-container">
-      <ScoreBoard score={score}/>
+      <div className="scoreBoard-container">
+        <ScoreBoard score={score}/>
+      </div>
       <div className="board"  style={{ gridTemplateColumns: `repeat(${size}, 1fr)` }}>
         {shuffledCards.map((card, index) => {
           return (

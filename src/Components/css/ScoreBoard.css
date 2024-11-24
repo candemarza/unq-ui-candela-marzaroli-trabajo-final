@@ -1,49 +1,63 @@
-.score-window {
-  background-color: bisque;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.score-board{
+  background-color: #d6d3ce;
+  border-top: 3px solid #f0efed; 
+  border-left: 3px solid #f0efed; 
+  border-bottom: 3px solid #807f7f; 
+  border-right: 3px solid #807f7f; 
+  box-shadow: 1px 1px 5px #00000052;
+  width: 300px;
+  height: 120px;
 }
 
-.title-bar {
-  background-color: #ee8f8f;
+.title-bar { /* buscar font pixeleada */
   display: flex;
-  justify-content: flex-end; 
+  align-items: center;
+  height: 35px;
+  background: linear-gradient(90deg, #f88cc2, #f06faf);
+  color: #f0efed;
+  padding-left: 7px;
+  padding-right: 5px;
+  padding-top: 5px;
+  box-sizing: border-box;
 }
 
 .bar-button {
-  background-color: rgb(176, 196, 255);
-  height: 30px;
-  width: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 4px;
+  height: 15px;
+  width: 15px;
   color:#0d002e;
-}
+  background-color: #d6d3ce;
+  border-top: 1px solid #f0efed; 
+  border-left: 1px solid #f0efed; 
+  border-bottom: 1px solid #807f7f; 
+  border-right: 1px solid #807f7f; 
+  align-self: flex-start;
+  margin-left: auto;
+  cursor: pointer;
+  font-size: 13px;
+  /*mover la fuckin cruzzzz*/
+  box-sizing: border-box;
 
-.min {
-    font-size: 35px;
-    padding-bottom: 23px;
-    box-sizing: border-box;
-}
-
-.box {
-    font-size: 30px;
-    padding-bottom: 9px;
-    box-sizing: border-box;
-}
-
-.x {
-    font-size: 20px;
 }
 
 .screen {
-  background-color: orchid;
-  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 }
 
 .score {
-  font-size: 30px;
-  margin: 0;
+  align-self: flex-start;
+}
+
+.score-button{
+  width: 40%;
+  align-self: center;
+  margin-top: 15px;
+  background-color: #d6d3ce;
+  border-top: 1px solid #b3b2b0; 
+  border-left: 1px solid #b3b2b0; 
+  border-bottom: 2px solid #424242; 
+  border-right: 2px solid #424242; 
+  box-shadow: 0px 0px 3px #000000;
+  cursor: pointer;
 }

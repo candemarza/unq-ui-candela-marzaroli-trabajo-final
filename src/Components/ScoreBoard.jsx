@@ -1,16 +1,23 @@
 import React from 'react';
 import './css/ScoreBoard.css';
+import { useNavigate } from 'react-router-dom';
 
 const ScoreBoard = ({ score }) => {
+
+ const router = useNavigate();
+  const goHome = () => {
+      router("/");
+  }
+
   return (
-    <div>
+    <div className="score-board">
         <div className="title-bar">
-            <div className="bar-button min">_</div>
-            <div className="bar-button box">□</div>
-            <div className="bar-button x">✖</div>
+            Score
+            <div className="bar-button">✖</div>
         </div>
         <div className="screen">
-            <h1 className="score">Score: 4</h1>
+            <div className="score">🌸 Your score is {score}...</div>
+            <div className="score-button" onClick={goHome}>Go home?</div>
         </div>
     </div>
   );
