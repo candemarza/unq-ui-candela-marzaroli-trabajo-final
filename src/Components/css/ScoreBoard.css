@@ -21,6 +21,10 @@
   box-sizing: border-box;
 }
 
+.two{
+  background: linear-gradient(90deg, #8cb7f8, #6fcbf0);
+}
+
 .bar-button {
   height: 15px;
   width: 15px;
