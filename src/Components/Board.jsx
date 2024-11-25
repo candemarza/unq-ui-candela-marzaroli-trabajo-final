@@ -14,10 +14,12 @@ const Board = ({list, size, numOfPlayers}) => {
   const [score, setScore] = useState(0);
   const [isShowing, setIsShowing] = useState(false);
 
+  
+
   useEffect(() => {
     const shuffledList = shuffle([...list]);
     setShuffledCards(
-        shuffledList.map((color, i) => ({ index: i, color, flipped: false }))
+      shuffledList.map((color, i) => ({ index: i, color, flipped: false }))
     );
   }, []);
 
@@ -47,7 +49,7 @@ const Board = ({list, size, numOfPlayers}) => {
   };
 
   const checkIfMatch = (card1, card2) => {
-    if (card1.color === card2.color) {
+    if (card1.color.name === card2.color.value) {
       setCardFlipped(null); //dejo las cartas giradas
       setScore(score + 1); //sumo 1 al puntaje
     } else {

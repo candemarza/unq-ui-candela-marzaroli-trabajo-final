@@ -36,4 +36,19 @@
 .card-back {
     box-shadow: 6px 7px;
     transform: rotateY(180deg);
+    align-content: center;
+    background-color: #ffffff;
 }
+
+.color-name{
+    font-size: 100%;
+    text-wrap: wrap;
+    font-weight: 600;
+    color: #000000;
+}
+.color-hex{
+    font-size: 1.4em;
+    font-weight: 400;
+    color: #000000;
+}
+
