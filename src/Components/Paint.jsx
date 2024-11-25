@@ -25,22 +25,22 @@ const Paint = () => {
         <div className="paint-middle">
           <div className="paint-tools-bar">
             <div className="paint-tools">
-                <div className="paint-tool">1</div>
-                <div className="paint-tool">2</div>
-                <div className="paint-tool">3</div>
-                <div className="paint-tool">4</div>
-                <div className="paint-tool">5</div>
-                <div className="paint-tool">6</div>
-                <div className="paint-tool">7</div>
-                <div className="paint-tool">8</div>
-                <div className="paint-tool">9</div>
-                <div className="paint-tool">10</div>
-                <div className="paint-tool">11</div>
-                <div className="paint-tool">12</div>
-                <div className="paint-tool">13</div>
-                <div className="paint-tool">14</div>
-                <div className="paint-tool">15</div>
-                <div className="paint-tool">16</div>
+            <img className="paint-tool" src={`../assets/paint-tools/1.jpeg`}/>
+            <img className="paint-tool" src={`../assets/paint-tools/2.jpeg`}/>
+            <img className="paint-tool" src={`../assets/paint-tools/3.jpeg`}/>
+            <img className="paint-tool" src={`../assets/paint-tools/4.jpeg`}/>
+            <img className="paint-tool" src={`../assets/paint-tools/5.jpeg`}/>    
+            <img className="paint-tool" src={`../assets/paint-tools/6.jpeg`}/>    
+            <img className="paint-tool" src={`../assets/paint-tools/7.jpeg`}/>    
+            <img className="paint-tool" src={`../assets/paint-tools/8.jpeg`}/>    
+            <img className="paint-tool" src={`../assets/paint-tools/9.jpeg`}/>    
+            <img className="paint-tool" src={`../assets/paint-tools/10.jpeg`}/> 
+            <img className="paint-tool" src={`../assets/paint-tools/11.jpeg`}/>
+            <img className="paint-tool" src={`../assets/paint-tools/12.jpeg`}/>    
+            <img className="paint-tool" src={`../assets/paint-tools/13.jpeg`}/>   
+            <img className="paint-tool" src={`../assets/paint-tools/14.jpeg`}/>    
+            <img className="paint-tool" src={`../assets/paint-tools/15.jpeg`}/>    
+            <img className="paint-tool" src={`../assets/paint-tools/16.jpeg`}/>
             </div>
             <div className="paint-weirdSideRectangle" />
           </div>
@@ -51,11 +51,11 @@ const Paint = () => {
           <div className="paint-colorBar">
             <div className="paint-mainColors">
               <div
-                className="color main-1"
+                className="color main one"
                 style={{ backgroundColor: "#000" }}
               ></div>
               <div
-                className="color main-2"
+                className="color main two"
                 style={{ backgroundColor: "#fff" }}
               ></div>
             </div>
