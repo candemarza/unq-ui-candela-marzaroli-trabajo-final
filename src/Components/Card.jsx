@@ -1,10 +1,10 @@
 import React from "react";
 import "./css/Card.css"
 
-const Card = ({ handleCardFlip, card }) => {
+const Card = ({ handleCardFlip, card, isShowing }) => {
   
   const flipCard = () => {
-  (!card.flipped) ? handleCardFlip(card) : null;
+  (!card.flipped)&&(!isShowing) ? handleCardFlip(card) : null;
   };
  
   return (

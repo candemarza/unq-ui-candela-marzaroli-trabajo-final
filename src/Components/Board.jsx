@@ -12,9 +12,10 @@ const Board = ({list, size, numOfPlayers}) => {
   const [shuffledCards, setShuffledCards] = useState([]);
   const [cardFlipped, setCardFlipped] = useState(null);
   const [score, setScore] = useState(0);
+  const [isShowing, setIsShowing] = useState(false);
 
   useEffect(() => {
-    const shuffledList = shuffle([...list, ...list]);
+    const shuffledList = shuffle([...list]);
     setShuffledCards(
         shuffledList.map((color, i) => ({ index: i, color, flipped: false }))
     );
@@ -50,15 +51,18 @@ const Board = ({list, size, numOfPlayers}) => {
       setCardFlipped(null); //dejo las cartas giradas
       setScore(score + 1); //sumo 1 al puntaje
     } else {
+      setIsShowing(true); //para que no me deje girar otra carta antes de que se muestren las dos
       setTimeout(() => { //giro ambas cartas, despues de 2 segundos
         const boardCopy = [...shuffledCards];
         boardCopy.splice(card1.index, 1, { ...card1, flipped: false });
         boardCopy.splice(card2.index, 1, { ...card2, flipped: false });
         setShuffledCards(boardCopy); 
-        setCardFlipped(null); //pongo en null la carta girada
+        setCardFlipped(null); //volvemos ainiciar
+        setIsShowing(false); 
       }, 1000);
+      
     }
-  } //deberia de bloquear girar otra carta durante este timeput xq colapsa
+  }
 
   return (
     <div className="game-container">
@@ -68,7 +72,7 @@ const Board = ({list, size, numOfPlayers}) => {
       <div className="board"  style={{ gridTemplateColumns: `repeat(${size}, 1fr)` }}>
         {shuffledCards.map((card, index) => {
           return (
-            <Card key={index} card={card} handleCardFlip={handleCardFlip} />
+            <Card key={index} card={card} handleCardFlip={handleCardFlip} isShowing={isShowing} />
           );
         })}
       </div>

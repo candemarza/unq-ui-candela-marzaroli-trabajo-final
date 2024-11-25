@@ -37,27 +37,33 @@ const colorHexDictionary = {
   SeaGreen: "#2E8B57",
   Pink: "#FFBEC2",
   GoldenRod: "#DAA520",
-  Thisle: "#D8BFD8",
+  Thistle: "#D8BFD8",
   LightCoral: "#F08080",
   OliveDrab: "#6B8E23",
   Chocolate: "#D2691E"
   //hard ^^
 };
 
+const nameList = map(colorHexDictionary, (value, key) => {key, value});
+
+const hexList = map(colorHexDictionary, (value, key) => {value, key});
+
+
 //recibir como query param la dificultad?
 const difficulty = "hard";
+//recibir como query param el numero de jugadores?
+const numOfPlayers = 1;
 
 //es solo lso colores nombres x ahora 
-const easyList = Object.keys(colorHexDictionary).slice(0, 8);
-const mediumList = Object.keys(colorHexDictionary).slice(0, 18);
-const hardList = Object.keys(colorHexDictionary).slice(0, 32);
+const easyList = [...nameList.slice(0, 8), ...hexList.slice(0, 8)];
+const mediumList = [...nameList.slice(0, 18), ...hexList.slice(0, 18)];
+const hardList = [...nameList.slice(0, 32), ...hexList.slice(0, 32)];
 
 const size = difficulty === "easy" ? 4 : difficulty === "medium" ? 6 : 8;
 const list = difficulty === "easy" ? easyList : difficulty === "medium" ? mediumList : hardList;
 //ta raro no mg ^^ cambaira choose?
 
-//recibir como query param el numero de jugadores?
-const numOfPlayers = 1;
+
 
   return (
     <div>
