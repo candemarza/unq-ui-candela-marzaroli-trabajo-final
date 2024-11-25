@@ -11,9 +11,11 @@ import ScoreBoard from "./ScoreBoard";
 const Board = ({list, size, numOfPlayers}) => {
   const [shuffledCards, setShuffledCards] = useState([]);
   const [cardFlipped, setCardFlipped] = useState(null);
-  const [score, setScore] = useState(0);
+  
   const [isShowing, setIsShowing] = useState(false);
-
+  const [score2, setScore2] = useState(0);
+  const [score, setScore] = useState(0);
+  const [player1turn, setPlayer1Turn] = useState(true);
   
 
   useEffect(() => {
@@ -51,7 +53,7 @@ const Board = ({list, size, numOfPlayers}) => {
   const checkIfMatch = (card1, card2) => {
     if (card1.color.name === card2.color.value) {
       setCardFlipped(null); //dejo las cartas giradas
-      setScore(score + 1); //sumo 1 al puntaje
+      handleScore() //sumo 1 al puntaje que corresponde
     } else {
       setIsShowing(true); //para que no me deje girar otra carta antes de que se muestren las dos
       setTimeout(() => { //giro ambas cartas, despues de 2 segundos
@@ -61,15 +63,23 @@ const Board = ({list, size, numOfPlayers}) => {
         setShuffledCards(boardCopy); 
         setCardFlipped(null); //volvemos ainiciar
         setIsShowing(false); 
+        setPlayer1Turn(!player1turn); //cambio de jugador
       }, 1000);
       
     }
   }
 
+  const handleScore = () => {
+    if (Number(numOfPlayers) === 2) {
+      player1turn ? setScore(score + 1) : setScore2(score2 + 1);
+      setPlayer1Turn(!player1turn);
+    }
+  }
+  
   return (
     <div className="game-container">
       <div className="scoreBoard-container">
-        <ScoreBoard score={score}/>
+        <ScoreBoard score={score} score2={score2} numOfPlayers={numOfPlayers} player1turn={player1turn}/>
       </div>
       <div className="board"  style={{ gridTemplateColumns: `repeat(${size}, 1fr)` }}>
         {shuffledCards.map((card, index) => {

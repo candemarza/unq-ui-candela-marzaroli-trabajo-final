@@ -52,9 +52,7 @@ const hexList = Object.entries(colorHexDictionary).map(([name, value]) => ({ nam
 //recibir como query param el numero de jugadores?
 const params = useParams();
 const difficulty = params.difficulty;
-const numOfPlayers = params.numOfPlayers;
-console.log(numOfPlayers);
-console.log(difficulty);
+const numOfPlayers = params.players;
 
 //es solo lso colores nombres x ahora 
 const easyList = [...nameList.slice(0, 8), ...hexList.slice(0, 8)];
@@ -69,7 +67,7 @@ const list = difficulty === "easy" ? easyList : difficulty === "medium" ? medium
 
   return (
     <div>
-      <Board size ={size} list={list} numOfPlayers={params.numOfPlayers} />
+      <Board size ={size} list={list} numOfPlayers={numOfPlayers} />
     </div>
   );
 };

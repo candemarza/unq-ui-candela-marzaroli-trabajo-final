@@ -7,6 +7,7 @@
   box-shadow: 1px 1px 5px #00000052;
   width: 300px;
   height: 120px;
+  margin: 0px 25px;
 }
 
 .title-bar { /* buscar font pixeleada */
@@ -63,4 +64,19 @@
   border-right: 2px solid #424242; 
   box-shadow: 0px 0px 3px #000000;
   cursor: pointer;
+}
+
+.two-player-score{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.turn{
+  width: 350px;
+  height: 140px;
+  box-shadow: 0px 0px 25px #0d002e;
+  margin: 0px;
+  transition: width 0.3s ease, height 0.3s ease; /* Agrega la transición */
 }
