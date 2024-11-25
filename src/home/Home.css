@@ -82,3 +82,8 @@ body {
     background-color: #5a81bb;
     box-shadow: 4px 4px #0d002ebb;
 }
+
+.selected{
+    background-color: #875abb;
+    box-shadow: 4px 4px #0d002ebb;
+}

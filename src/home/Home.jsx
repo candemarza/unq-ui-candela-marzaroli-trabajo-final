@@ -6,7 +6,7 @@ import "./Home.css";
 const Home = () => {
   const navigate = useNavigate();
   const goToBoard = () => {
-    navigate("/play");
+    navigate(`/play/${difficulty}/${numberOfPlayers}`);
     /*pasar como params ?? o como??*/ 
   };
 
@@ -20,7 +20,9 @@ const Home = () => {
   const selectNumberOfPlayers = (num) => () => {
     setNumberOfPlayers(num);
   }
-
+  
+  console.log(difficulty);
+  console.log(numberOfPlayers);
   /* ver como hice las tabs en ml para marcar las opciones seleccionadas*/
 
   return (
@@ -30,13 +32,13 @@ const Home = () => {
         <h2 className="subtitle">Find the matching css standar color and it's hexcode! </h2>
          <div className="options"> 
           <div className="difficulty">
-            <div className="button" onClick={selectDifficulty("easy")}>Easy</div>
-            <div className="button" onClick={selectDifficulty("medium")}>Medium</div>
-            <div className="button" onClick={selectDifficulty("hard")}>Hard</div>
+            <div className={`button ${difficulty === "easy" ? "selected" : ""}`} onClick={selectDifficulty("easy")}>Easy</div>
+            <div className={`button ${difficulty === "medium" ? "selected" : ""}`} onClick={selectDifficulty("medium")}>Medium</div>
+            <div className={`button ${difficulty === "hard" ? "selected" : ""}`} onClick={selectDifficulty("hard")}>Hard</div>
           </div>
           <div className="numberOfPlayers">
-            <div className="button" onClick={selectNumberOfPlayers(1)}>1 player</div>
-            <div className="button" onClick={selectNumberOfPlayers(2)}>2 players</div>
+            <div className={`button ${numberOfPlayers === 1 ? "selected" : ""}`} onClick={selectNumberOfPlayers(1)}>1 player</div>
+            <div className={`button ${numberOfPlayers === 2 ? "selected" : ""}`} onClick={selectNumberOfPlayers(2)}>2 players</div>
           </div>
           <div className="button" onClick={goToBoard}>Start Game</div>
         </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import Board from "../Components/Board";
-import {useNavigate} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "./Game.css";
 
 
@@ -48,9 +48,13 @@ const nameList = Object.entries(colorHexDictionary).map(([name, value]) => ({ na
 const hexList = Object.entries(colorHexDictionary).map(([name, value]) => ({ name:value, value:name }));
 
 //recibir como query param la dificultad?
-const difficulty = "medium";
+
 //recibir como query param el numero de jugadores?
-const numOfPlayers = 1;
+const params = useParams();
+const difficulty = params.difficulty;
+const numOfPlayers = params.numOfPlayers;
+console.log(numOfPlayers);
+console.log(difficulty);
 
 //es solo lso colores nombres x ahora 
 const easyList = [...nameList.slice(0, 8), ...hexList.slice(0, 8)];
@@ -62,9 +66,10 @@ const list = difficulty === "easy" ? easyList : difficulty === "medium" ? medium
 //ta raro no mg ^^ cambaira choose?
 
 
+
   return (
     <div>
-      <Board size ={size} list={list} numOfPlayers={numOfPlayers} />
+      <Board size ={size} list={list} numOfPlayers={params.numOfPlayers} />
     </div>
   );
 };
