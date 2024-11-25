@@ -1,0 +1,88 @@
+.paint-window {
+  background-color: #d6d3ce;
+  border-top: 3px solid #f0efed;
+  border-left: 3px solid #f0efed;
+  border-bottom: 3px solid #807f7f;
+  border-right: 3px solid #807f7f;
+  box-shadow: 1px 1px 5px #00000052;
+  width: 70vw;
+  height: 70vh;
+}
+
+.paint-titleBar {
+  background-color: #00007d;
+  color: #f0efed;
+  display: flex;
+  padding: 5px;
+}
+
+.paint-buttons {
+  display: flex;
+  margin-left: auto;
+}
+
+.paint-button,
+.paint-tool {
+  height: 25px;
+  width: 25px;
+  color: #0d002e;
+  background-color: #d6d3ce;
+  border-top: 2px solid #f0efed;
+  border-left: 2px solid #f0efed;
+  border-bottom: 2px solid #807f7f;
+  border-right: 2px solid #807f7f;
+}
+.x {
+  margin-left: 6px;
+}
+
+.paint-configBar {
+  display: flex;
+  padding: 5px;
+  gap: 15px;
+}
+
+.paint-middle {
+  display: flex;
+  padding: 3px;
+}
+
+.paint-tools {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.paint-canvas {
+  background-color: #e2a2df;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+}
+
+.paint-weirdSideRectangle {
+  border-top: 2px solid #807f7f;
+  border-left: 2px solid #807f7f;
+  border-bottom: 2px solid #f0efed;
+  border-right: 2px solid #f0efed;
+  height: 17vh;
+  margin: 1.9vh 1vh;
+}
+
+.paint-colorBar{
+    display: flex;
+}
+
+.paint-mainColors{
+    background-color: #e0e0e0;
+    height: 50px;
+    width: 50px;
+}
+
+.color{
+    height: 25px;
+    width: 25px;
+}
+.all-colors{
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+}
