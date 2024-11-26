@@ -1,14 +1,14 @@
 import "./css/Paint.css";
 import React from "react";
 
-
+//tool selected es chosen para estilo :P
 const Paint = () => {
   return (
     <>
       <div className="paint-window">
         <div className="paint-titleBar">
           <div className="paint-icon"></div>
-          <img  src={`../assets/paint-tools/MS_Paint_Logo.png`}/>
+          <img className='paint-logo'  src={"assets/paint-tools/MS_Paint_Logo.png"}/>
           <div className="paint-title">ui - Paint</div>
           <div className="paint-buttons">
             <div className="paint-button">_</div>
@@ -27,22 +27,22 @@ const Paint = () => {
         <div className="paint-middle">
           <div className="paint-tools-bar">
             <div className="paint-tools">
-            <img className="paint-tool" src={`../assets/paint-tools/1.jpeg`}/>
-            <img className="paint-tool" src={`../assets/paint-tools/2.jpeg`}/>
-            <img className="paint-tool" src={`../assets/paint-tools/3.jpeg`}/>
-            <img className="paint-tool" src={`../assets/paint-tools/4.jpeg`}/>
-            <img className="paint-tool" src={`../assets/paint-tools/5.jpeg`}/>    
-            <img className="paint-tool" src={`../assets/paint-tools/6.jpeg`}/>    
-            <img className="paint-tool" src={`../assets/paint-tools/7.jpeg`}/>    
-            <img className="paint-tool" src={`../assets/paint-tools/8.jpeg`}/>    
-            <img className="paint-tool" src={`../assets/paint-tools/9.jpeg`}/>    
-            <img className="paint-tool" src={`../assets/paint-tools/10.jpeg`}/> 
-            <img className="paint-tool" src={`../assets/paint-tools/11.jpeg`}/>
-            <img className="paint-tool" src={`../assets/paint-tools/12.jpeg`}/>    
-            <img className="paint-tool" src={`../assets/paint-tools/13.jpeg`}/>   
-            <img className="paint-tool" src={`../assets/paint-tools/14.jpeg`}/>    
-            <img className="paint-tool" src={`../assets/paint-tools/15.jpeg`}/>    
-            <img className="paint-tool" src={`../assets/paint-tools/16.jpeg`}/>
+            <img className="paint-tool" src={`assets/paint-tools/star.jpeg`}/>
+            <img className="paint-tool" src={`assets/paint-tools/select.jpeg`}/>
+            <img className="paint-tool" src={`assets/paint-tools/eraser.jpeg`}/>
+            <img className="paint-tool" src={`assets/paint-tools/paint.jpeg`}/>    
+            <img className="paint-tool" src={`assets/paint-tools/dropper.jpeg`}/>    
+            <img className="paint-tool" src={`assets/paint-tools/zoom.jpeg`}/>
+            <img className="paint-tool" src={`assets/paint-tools/pencil.jpeg`}/>    
+            <img className="paint-tool" src={`assets/paint-tools/brush.jpeg`}/>    
+            <img className="paint-tool" src={`assets/paint-tools/spray.jpeg`}/>    
+            <img className="paint-tool" src={`assets/paint-tools/a.jpeg`}/> 
+            <img className="paint-tool" src={`assets/paint-tools/straight.jpeg`}/>
+            <img className="paint-tool" src={`assets/paint-tools/s.jpeg`}/>    
+            <img className="paint-tool" src={`assets/paint-tools/rect.jpeg`}/>   
+            <img className="paint-tool" src={`assets/paint-tools/l.jpeg`}/>    
+            <img className="paint-tool" src={`assets/paint-tools/oval.jpeg`}/>    
+            <img className="paint-tool" src={`assets/paint-tools/squoval.jpeg`}/>
             </div>
             <div className="paint-weirdSideRectangle" />
           </div>

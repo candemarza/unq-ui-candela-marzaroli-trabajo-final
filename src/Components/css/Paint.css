@@ -8,7 +8,7 @@
   width: 70vw;
   height: 80hw;
   max-width: 800px;
-  min-width: 360px;
+  min-width: 340px;
 }
 
 .paint-titleBar {
@@ -16,6 +16,12 @@
   color: #f0efed;
   display: flex;
   padding: 5px;
+}
+
+.paint-logo {
+  height: 20px;
+  width: 20px;
+  padding-right: 10px;
 }
 
 .paint-buttons {
@@ -35,7 +41,16 @@
   border-right: 2px solid #807f7f;
 }
 
-.paint-button{
+.chosen {
+  background-color: #fff;
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  box-shadow: 2px 0px 0px #fff, 0px 2px 0px #fff;
+}
+
+.paint-button {
   height: 20px;
   width: 20px;
 }
@@ -65,14 +80,20 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 1px;
   margin: 4px;
-  margin-top: 0px;
+  margin-top: 5px;
   background-color: #000;
   box-shadow: 1px 1px 0px #000;
 }
 
 .paint-canvas {
-  background: linear-gradient(157deg, rgba(64,50,179,1) 0%, rgba(122,88,209,1) 35%, rgba(179,119,210,1) 55%, rgba(245,171,159,1) 97%);
-   
+  background: linear-gradient(
+    157deg,
+    rgba(64, 50, 179, 1) 0%,
+    rgba(122, 88, 209, 1) 35%,
+    rgba(179, 119, 210, 1) 55%,
+    rgba(245, 171, 159, 1) 97%
+  );
+
   width: 100%;
   align-content: center;
   justify-content: center;
@@ -80,9 +101,7 @@
   border-left: 3px solid #807f7f;
   border-bottom: 3px solid #f0efed;
   border-right: 3px solid #f0efed;
-  box-shadow: -1px -1px 0px #000000,
-              1px 1px 0px #838383;
-
+  box-shadow: -1px -1px 0px #000000, 1px 1px 0px #838383;
 }
 
 .paint-weirdSideRectangle {
@@ -95,67 +114,55 @@
   margin-bottom: 30px;
 }
 
-.paint-colorBar{
-    display: flex;
-    padding: 10px;
-    align-items: center;
-    border-top: 2px solid #f0efed;
-    box-shadow: 0px -2px 0px #807f7f;
+.paint-colorBar {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  border-top: 2px solid #f0efed;
+  box-shadow: 0px -2px 0px #807f7f;
 }
 
-.paint-mainColors{
-    background-image: url(.../assets/paint-tools/selected-bg.png);
-    height: 40px;
-    width: 40px;
-    border-top: 2px solid #000000;
-    border-left: 2px solid #000000;
-    border-bottom: 2px solid #807f7f;
-    border-right: 2px solid #807f7f;
-    box-shadow: 0px 2px 0px #ffffff,
-                2px 0px 0px #ffffff,
-                2px 2px 0px #ffffff,
-                0px -2px 0px #807f7f,
-                -2px 0px 0px #807f7f,
-                -2px -2px 0px #807f7f;
-    margin-right: 10px;
-    position: relative;
+.paint-mainColors {
+  background-image: url(assets/paint-tools/selected-bg.png);
+  background-size: 20px;
+  height: 40px;
+  width: 40px;
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-bottom: 2px solid #807f7f;
+  border-right: 2px solid #807f7f;
+  box-shadow: 0px 2px 0px #ffffff, 2px 0px 0px #ffffff, 2px 2px 0px #ffffff,
+    0px -2px 0px #807f7f, -2px 0px 0px #807f7f, -2px -2px 0px #807f7f;
+  margin-right: 10px;
+  position: relative;
 }
 
-.color{
+.color {
   height: 15px;
   width: 15px;
-    border-top: 1px solid #000000;
-    border-left: 1px solid #000000;
-    box-shadow: 0px 1px 0px #ffffff,
-                1px 0px 0px #ffffff,
-                1px 1px 0px #ffffff,
-                0px -1px 0px #807f7f,
-                -1px 0px 0px #807f7f,
-                -1px -1px 0px #807f7f;
+  border-top: 1px solid #000000;
+  border-left: 1px solid #000000;
+  box-shadow: 0px 1px 0px #ffffff, 1px 0px 0px #ffffff, 1px 1px 0px #ffffff,
+    0px -1px 0px #807f7f, -1px 0px 0px #807f7f, -1px -1px 0px #807f7f;
 }
 
-.main{
-    border: 2px solid #c9c9c9;
-    box-shadow: 0px 2px 0px #807f7f,
-                2px 0px 0px #807f7f,
-                2px 2px 0px #807f7f,
-                0px -2px 0px #ebebeb,
-                -2px 0px 0px #ebebeb,
-                -2px -2px 0px #ebebeb;
-    
+.main {
+  border: 2px solid #c9c9c9;
+  box-shadow: 0px 2px 0px #807f7f, 2px 0px 0px #807f7f, 2px 2px 0px #807f7f,
+    0px -2px 0px #ebebeb, -2px 0px 0px #ebebeb, -2px -2px 0px #ebebeb;
 }
 
-.c-two{
+.c-two {
   transform: translate(30%, -70%);
 }
 
-.c-one{
-  transform: translate(85%, 85%);
+.c-one {
+  transform: translate(82%, 82%);
 }
 
-.all-colors{
-    display: grid;
-    grid-template-columns: repeat(14, 1fr);
-    gap: 3px;
-    background-color: #f0efed;
+.all-colors {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  gap: 3px;
+  background-color: #ffffff;
 }
