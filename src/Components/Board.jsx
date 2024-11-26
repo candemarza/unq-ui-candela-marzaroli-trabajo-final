@@ -48,6 +48,7 @@ const Board = ({list, size, numOfPlayers}) => {
     } else { //sino, chequeo
         checkIfMatch(newFlippedCard, cardFlipped);
     }
+    
   };
 
   const checkIfMatch = (card1, card2) => {
@@ -65,7 +66,6 @@ const Board = ({list, size, numOfPlayers}) => {
         setIsShowing(false); 
         setPlayer1Turn(!player1turn); //cambio de jugador
       }, 1000);
-      
     }
   }
 
@@ -77,7 +77,26 @@ const Board = ({list, size, numOfPlayers}) => {
     else {
       setScore(score + 1);
     }
+  }
+  
+  useEffect(() => {
+    finsihedGame();
+  }, [score, score2]);
 
+  const finsihedGame = () => {
+    if (((score + score2) === (size*size/2))) {
+      console.log("el ganador es: " + winner());
+    }
+  }
+
+  const winner = () => {
+    if(score > score2) {
+      return "🌸";
+    } else if (score < score2) {
+      return "🐬";
+    } else {
+      return "🌸🐬";
+    }
   }
   
   return (
