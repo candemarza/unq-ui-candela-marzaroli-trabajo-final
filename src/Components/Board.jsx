@@ -74,6 +74,10 @@ const Board = ({list, size, numOfPlayers}) => {
       player1turn ? setScore(score + 1) : setScore2(score2 + 1);
       setPlayer1Turn(!player1turn);
     }
+    else {
+      setScore(score + 1);
+    }
+
   }
   
   return (
