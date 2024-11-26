@@ -1,5 +1,6 @@
-import img from "../assets/paint-frame-horizontal.png";
 import "./css/Paint.css";
+import React from "react";
+
 
 const Paint = () => {
   return (
@@ -7,6 +8,7 @@ const Paint = () => {
       <div className="paint-window">
         <div className="paint-titleBar">
           <div className="paint-icon"></div>
+          <img  src={`../assets/paint-tools/MS_Paint_Logo.png`}/>
           <div className="paint-title">ui - Paint</div>
           <div className="paint-buttons">
             <div className="paint-button">_</div>
@@ -51,43 +53,43 @@ const Paint = () => {
           <div className="paint-colorBar">
             <div className="paint-mainColors">
               <div
-                className="color main one"
+                className="color main c-one"
                 style={{ backgroundColor: "#000" }}
               ></div>
               <div
-                className="color main two"
+                className="color main c-two"
                 style={{ backgroundColor: "#fff" }}
               ></div>
             </div>
             <div className="all-colors">
               <div className="color" style={{ backgroundColor: "#000" }} />
-              <div className="color" style={{ backgroundColor: "#000" }} />
+              <div className="color" style={{ backgroundColor: "#808080" }} />
               <div className="color" style={{ backgroundColor: "#800000" }} />
               <div className="color" style={{ backgroundColor: "#808000" }} />
               <div className="color" style={{ backgroundColor: "#008000" }} />
               <div className="color" style={{ backgroundColor: "#008080" }} />
               <div className="color" style={{ backgroundColor: "#000080" }} />
               <div className="color" style={{ backgroundColor: "#800080" }} />
-              <div className="color" style={{ backgroundColor: "#000" }} />
-              <div className="color" style={{ backgroundColor: "#000" }} />
-              <div className="color" style={{ backgroundColor: "#000" }} />
-              <div className="color" style={{ backgroundColor: "#000" }} />
-              <div className="color" style={{ backgroundColor: "#000" }} />
-              <div className="color" style={{ backgroundColor: "#000" }} />
-              <div className="color" style={{ backgroundColor: "#fff" }} />
-              <div className="color" style={{ backgroundColor: "#000" }} />
+              <div className="color" style={{ backgroundColor: "#808040" }} />
+              <div className="color" style={{ backgroundColor: "#004040" }} />
+              <div className="color" style={{ backgroundColor: "#0080FF" }} />
+              <div className="color" style={{ backgroundColor: "#004080" }} />
+              <div className="color" style={{ backgroundColor: "#4000FF" }} />
+              <div className="color" style={{ backgroundColor: "#804000" }} />
+              <div className="color" style={{ backgroundColor: "#FFF" }} />
+              <div className="color" style={{ backgroundColor: "#C0C0C0" }} />
               <div className="color" style={{ backgroundColor: "#f00" }} />
-              <div className="color" style={{ backgroundColor: "#ff0" }} />
-              <div className="color" style={{ backgroundColor: "#0f0" }} />
-              <div className="color" style={{ backgroundColor: "#0ff" }} />
-              <div className="color" style={{ backgroundColor: "#00f" }} />
-              <div className="color" style={{ backgroundColor: "#f0f" }} />
-              <div className="color" style={{ backgroundColor: "#000" }} />
-              <div className="color" style={{ backgroundColor: "#000" }} />
-              <div className="color" style={{ backgroundColor: "#000" }} />
-              <div className="color" style={{ backgroundColor: "#000" }} />
-              <div className="color" style={{ backgroundColor: "#000" }} />
-              <div className="color" style={{ backgroundColor: "#000" }} />
+              <div className="color" style={{ backgroundColor: "#FF0" }} />
+              <div className="color" style={{ backgroundColor: "#0F0" }} />
+              <div className="color" style={{ backgroundColor: "#0FF" }} />
+              <div className="color" style={{ backgroundColor: "#00F" }} />
+              <div className="color" style={{ backgroundColor: "#F0F" }} />
+              <div className="color" style={{ backgroundColor: "#FFFF80" }} />
+              <div className="color" style={{ backgroundColor: "#00FF80" }} />
+              <div className="color" style={{ backgroundColor: "#80FFFF" }} />
+              <div className="color" style={{ backgroundColor: "#8080FF" }} />
+              <div className="color" style={{ backgroundColor: "#FF0080" }} />
+              <div className="color" style={{ backgroundColor: "#FF8040" }} />
               
             </div>
           </div>
