@@ -47,21 +47,19 @@ const colorHexDictionary = {
 const nameList = Object.entries(colorHexDictionary).map(([name, value]) => ({ name, value }));
 const hexList = Object.entries(colorHexDictionary).map(([name, value]) => ({ name:value, value:name }));
 
-//recibir como query param la dificultad?
 
-//recibir como query param el numero de jugadores?
+//no se si deberian ser params :(
 const params = useParams();
 const difficulty = params.difficulty;
 const numOfPlayers = params.players;
 
-//es solo lso colores nombres x ahora 
 const easyList = [...nameList.slice(0, 8), ...hexList.slice(0, 8)];
 const mediumList = [...nameList.slice(0, 18), ...hexList.slice(0, 18)];
 const hardList = [...nameList.slice(0, 32), ...hexList.slice(0, 32)];
 
 const size = difficulty === "easy" ? 4 : difficulty === "medium" ? 6 : 8;
 const list = difficulty === "easy" ? easyList : difficulty === "medium" ? mediumList : hardList;
-//ta raro no mg ^^ cambaira choose?
+//ta raro no mg ^^
 
 
 

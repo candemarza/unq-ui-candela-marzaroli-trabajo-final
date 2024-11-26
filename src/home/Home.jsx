@@ -7,7 +7,6 @@ const Home = () => {
   const navigate = useNavigate();
   const goToBoard = () => {
     navigate(`/play/${difficulty}/${numberOfPlayers}`);
-    /*pasar como params ?? o como??*/ 
   };
 
   const [difficulty, setDifficulty] = useState("easy");
@@ -20,10 +19,6 @@ const Home = () => {
   const selectNumberOfPlayers = (num) => () => {
     setNumberOfPlayers(num);
   }
-  
-  console.log(difficulty);
-  console.log(numberOfPlayers);
-  /* ver como hice las tabs en ml para marcar las opciones seleccionadas*/
 
   return (
     <div className="window">

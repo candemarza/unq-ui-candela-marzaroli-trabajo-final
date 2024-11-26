@@ -26,7 +26,7 @@ const Card = ({ handleCardFlip, card, isShowing }) => {
         </div>
       </div>
     </div>)
-    
+    //refactorizar las cards a renderizar el front o el back 
   );
 };
 
