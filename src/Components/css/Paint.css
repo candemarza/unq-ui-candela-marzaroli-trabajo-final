@@ -7,7 +7,7 @@
   box-shadow: 1px 1px 5px #00000052;
   width: 70vw;
   height: 80hw;
-  max-width: 800px;
+  max-width: 750px;
   min-width: 340px;
 }
 
@@ -86,13 +86,7 @@
 }
 
 .paint-canvas {
-  background: linear-gradient(
-    157deg,
-    rgba(64, 50, 179, 1) 0%,
-    rgba(122, 88, 209, 1) 35%,
-    rgba(179, 119, 210, 1) 55%,
-    rgba(245, 171, 159, 1) 97%
-  );
+  background-color: #fcf7fa;
 
   width: 100%;
   align-content: center;
