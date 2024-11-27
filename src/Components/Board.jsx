@@ -55,7 +55,6 @@ const Board = ({list, size, numOfPlayers}) => {
     if (card1.color.name === card2.color.value) {
       setCardFlipped(null); //dejo las cartas giradas
       handleScore() //sumo 1 al puntaje que corresponde
-      setMatchedCards(card1, card2); //digo que se matchearon
     } else {
       setIsShowing(true); //para que no me deje girar otra carta antes de que se muestren las dos
       setTimeout(() => { //giro ambas cartas, despues de 2 segundos
@@ -68,13 +67,6 @@ const Board = ({list, size, numOfPlayers}) => {
         setPlayer1Turn(!player1turn); //cambio de jugador
       }, 1000);
     }
-  }
-
-  const setMatchedCards = (card1, card2) => {
-    const boardCopy = [...shuffledCards];
-    boardCopy.splice(card1.index, 1, { ...card1, matched: true });
-    boardCopy.splice(card2.index, 1, { ...card2, matched: true });
-    setShuffledCards(boardCopy);
   }
 
   const handleScore = () => {

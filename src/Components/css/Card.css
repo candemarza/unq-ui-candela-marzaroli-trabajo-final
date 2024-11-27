@@ -8,7 +8,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 2px;
+    border-radius: 4px;
     border-top: 3px solid #f0efed; 
     border-left: 3px solid #f0efed; 
     border-bottom: 3px solid #807f7f; 
@@ -27,8 +27,8 @@
 }
 
 .card-flipped {
-    transform: rotateY(180deg) translateX(-6px) scale(1.08);
-    box-shadow: 0px 0px 15px #0d002e71;
+    transform: rotateY(180deg) translateX(-6px) scale(1.05);
+    box-shadow: 0px 0px 15px #0d002e9c;
 }
 
 

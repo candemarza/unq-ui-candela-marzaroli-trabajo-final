@@ -24,7 +24,7 @@ const colorHexDictionary = {
     "Ghost White": "#F8F8FF",
     "Rebecca Purple": "#663399",
     "Orchid": "#DA70D6",
-    "Medium Violet Red": "#c71585",
+    "Medium Violet Red": "#C71585",
     "Midnight Blue": "#191970",
     //medium ^^
     "Tomato": "#FF6347",
