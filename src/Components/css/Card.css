@@ -3,17 +3,22 @@
     aspect-ratio: 1 / 1;
 }
 
+
 .card-front, .card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 8px;
+    border-radius: 2px;
+    border-top: 3px solid #f0efed; 
+    border-left: 3px solid #f0efed; 
+    border-bottom: 3px solid #807f7f; 
+    border-right: 3px solid #807f7f; 
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 
+
 .card-content{
-    position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -21,34 +26,37 @@
     transform-style: preserve-3d;
 }
 
-.card-front:hover{
-    box-shadow: 6px 7px #0000002d;
+.card-flipped {
+    transform: rotateY(180deg) translateX(-6px) scale(1.08);
+    box-shadow: 0px 0px 15px #0d002e71;
 }
 
-.card-flipped {
-    transform: rotateY(180deg);
-}
 
 .card-front {
     background-color: #ffffff;
 }
 
 .card-back {
-    box-shadow: 6px 7px;
     transform: rotateY(180deg);
     align-content: center;
     background-color: #ffffff;
 }
 
 .color-name{
-    font-size: 100%;
+    font-size: 95%;
     text-wrap: wrap;
     font-weight: 600;
     color: #000000;
+    text-shadow: 1px 1px 0px #f0efed31;
 }
 .color-hex{
-    font-size: 1.4em;
-    font-weight: 400;
+    font-size: 95%;
+    font-weight: 500;
     color: #000000;
 }
+
+.match{
+    transform: scale(1);
+}
+
 

@@ -14,15 +14,16 @@ const Card = ({ handleCardFlip, card, isShowing }) => {
     (<div className="card" onClick={flipCard}>
       <div className={`card-content ${card.flipped ? "card-flipped" : ""}`}>
         <div className="card-front"/>
-        <div className="card-back" style={{ backgroundColor: card.color.name }}></div>
+        <div className="card-back" style={{ backgroundColor: card.color.value }}>
+        <div className="color-name">{card.color.name}</div>
+        </div>
       </div>
     </div>) : 
     (<div className="card" onClick={flipCard}>
       <div className={`card-content ${card.flipped ? "card-flipped" : ""}`}>
         <div className="card-front"/>
         <div className="card-back">
-          <div className="color-name">{card.color.value}</div>
-          <div className="color-hex">{card.color.name}</div>
+          <div className="color-hex" style={{color:  `${card.matched ? card.color.name : "" }`}}>{card.color.name}</div>
         </div>
       </div>
     </div>)
