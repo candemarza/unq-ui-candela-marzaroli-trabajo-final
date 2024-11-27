@@ -46,7 +46,7 @@ const Window = ({ winner, emoji, position }) => {
         <div className="win-bar-button">✖</div>
       </div>
       <div className="win-screen">
-        <div className="win-text"> You won {emoji} !!</div>
+        {winner === "match" ? (<div className="win-text"> It was a match {emoji} !!</div>) : <div className="win-text"> You won {emoji} !!</div>}
         <div className="win-back-button" onClick={goHome}>
           Play Again?
         </div>
