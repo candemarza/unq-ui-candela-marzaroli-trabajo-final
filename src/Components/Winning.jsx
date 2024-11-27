@@ -1,3 +1,6 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
+
 const Winning = ({ winner }) => {
   return (
     <div className="background"> {/*ver como mierda ahcer confeti de emopjis :)))))*/}
@@ -11,16 +14,16 @@ const Winning = ({ winner }) => {
   )
 };
 
-const router = useNavigate();
-const goHome = () => {
-    router("/");
-}
+
 
 const Window = ({ winner }) => {
-
+  const router = useNavigate();
+  const goHome = () => {
+      router("/");
+  }
   return (
     <>
-      {winner.length === 1 ? (
+      {winner === 1 ? (
         <div className="score-board">
           <div className={`title-bar ${winner === '🐬' ? "two" : ""}`}>
             {winner}
