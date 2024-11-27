@@ -91,11 +91,11 @@ const Board = ({list, size, numOfPlayers}) => {
 
   const winner = () => {
     if(score > score2) {
-      return "🌸";
+      return "p-one";
     } else if (score < score2) {
-      return "🐬";
+      return "p-two";
     } else {
-      return "🌸🐬";
+      return "match";
     }
   }
   

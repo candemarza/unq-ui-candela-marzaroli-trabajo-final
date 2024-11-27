@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/play/:difficulty/:players" element={<Game />} />
         <Route path="/paint" element={<Paint />} />
-        <Route path="/win" element={<Winning winner='🐬'/>} />
+        <Route path="/win" element={<Winning winner="match"/>} />
       </Routes>
     </BrowserRouter>
   );
