@@ -2,20 +2,19 @@
     display: flex;
     direction: row;
     justify-content: space-between;
-    align-items: center;
-    height: 100vh;
+    height: 90vh;
     padding: none;
     margin: none;
-    height: 650px;
+    gap : 2vh;
 
 }
 
 .scoreBoard-container{
-    padding-right: 95px;
+    align-content: center;
+    width: 30vw;
 }
 
 .board{
     display: grid;
     grid-gap: 10px;
-    width: 650px;
 }
