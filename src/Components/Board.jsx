@@ -99,12 +99,13 @@ const Board = ({list, size, numOfPlayers}) => {
   }
 
   const winner = () => {
-    if(score > score2) {
-      return "p-one";
-    } else if (score < score2) {
-      return "p-two";
-    } else {
-      return "match";
+    switch (true) {
+      case score > score2:
+        return "p-one";
+      case score < score2:
+        return "p-two";
+      default:
+        return "match";
     }
   }
   

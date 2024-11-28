@@ -56,9 +56,28 @@ const easyList = [...nameList.slice(0, 8), ...hexList.slice(0, 8)];
 const mediumList = [...nameList.slice(0, 18), ...hexList.slice(0, 18)];
 const hardList = [...nameList.slice(0, 32), ...hexList.slice(0, 32)];
 
-const size = difficulty === "easy" ? 4 : difficulty === "medium" ? 6 : 8;
-const list = difficulty === "easy" ? easyList : difficulty === "medium" ? mediumList : hardList;
-//ta raro no mg ^^
+let size;
+let list;
+
+switch (difficulty) {
+  case "easy":
+    size = 4;
+    list = easyList;
+    break;
+  case "medium":
+    size = 6;
+    list = mediumList;
+    break;
+  case "hard":
+    size = 8;
+    list = hardList;
+    break;
+  default:
+    size = 4;
+    list = easyList;
+    break;
+}
+
 
 
 

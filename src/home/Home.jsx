@@ -22,7 +22,7 @@ const Home = () => {
   }
 
   return (
-
+    <div className="background-home">
     <Paint>
         <h1 className="title">Memotest</h1>
         <h2 className="subtitle">Find the matching css standar color and it's hexcode! </h2>
@@ -39,6 +39,7 @@ const Home = () => {
           <div className="button" onClick={goToBoard}>Start Game</div>
         </div>
     </Paint>
+    </div>
   );
 };
 
