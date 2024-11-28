@@ -35,58 +35,58 @@ const Paint = ({children}) => {
             <div className="paint-tools">
               <img
                 className="paint-tool"
-                src={`assets/paint-tools/star.jpeg`}
+                src={`assets/paint-tools/star.png`}
               />
               <img
                 className="paint-tool"
-                src={`assets/paint-tools/select.jpeg`}
+                src={`assets/paint-tools/select.png`}
               />
               <img
                 className="paint-tool"
-                src={`assets/paint-tools/eraser.jpeg`}
+                src={`assets/paint-tools/eraser.png`}
               />
               <img
                 className="paint-tool"
-                src={`assets/paint-tools/paint.jpeg`}
+                src={`assets/paint-tools/paint.png`}
               />
               <img
                 className="paint-tool"
-                src={`assets/paint-tools/dropper.jpeg`}
+                src={`assets/paint-tools/dropper.png`}
               />
               <img
                 className="paint-tool"
-                src={`assets/paint-tools/zoom.jpeg`}
+                src={`assets/paint-tools/zoom.png`}
               />
               <img
                 className="paint-tool"
-                src={`assets/paint-tools/pencil.jpeg`}
+                src={`assets/paint-tools/pencil.png`}
               />
               <img
                 className="paint-tool"
-                src={`assets/paint-tools/brush.jpeg`}
+                src={`assets/paint-tools/brush.png`}
               />
               <img
                 className="paint-tool"
-                src={`assets/paint-tools/spray.jpeg`}
+                src={`assets/paint-tools/spray.png`}
               />
-              <img className="paint-tool" src={`assets/paint-tools/a.jpeg`} />
+              <img className="paint-tool" src={`assets/paint-tools/a.png`} />
               <img
                 className="paint-tool"
-                src={`assets/paint-tools/straight.jpeg`}
+                src={`assets/paint-tools/straight.png`}
               />
-              <img className="paint-tool" src={`assets/paint-tools/s.jpeg`} />
+              <img className="paint-tool" src={`assets/paint-tools/s.png`} />
               <img
                 className="paint-tool"
-                src={`assets/paint-tools/rect.jpeg`}
+                src={`assets/paint-tools/rect.png`}
               />
-              <img className="paint-tool" src={`assets/paint-tools/l.jpeg`} />
+              <img className="paint-tool" src={`assets/paint-tools/l.png`} />
               <img
                 className="paint-tool"
-                src={`assets/paint-tools/oval.jpeg`}
+                src={`assets/paint-tools/oval.png`}
               />
               <img
                 className="paint-tool"
-                src={`assets/paint-tools/squoval.jpeg`}
+                src={`assets/paint-tools/squoval.png`}
               />
             </div>
             <div className="paint-weirdSideRectangle" />
