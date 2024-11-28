@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 //tool selected es chosen para estilo :P
-const Paint = () => {
+const Paint = ({children}) => {
   return (
     <>
       <div className="paint-window">
@@ -92,7 +92,7 @@ const Paint = () => {
             <div className="paint-weirdSideRectangle" />
           </div>
           <div className="paint-canvas">
-            <h1>Canvas</h1>
+            {children}
           </div>
         </div>
         <div className="paint-colorBar">

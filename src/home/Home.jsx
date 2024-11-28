@@ -2,6 +2,7 @@ import React from "react";
 import {useNavigate} from "react-router-dom";
 import { useState } from "react";
 import "./Home.css";
+import Paint from "../components/Paint";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -21,8 +22,8 @@ const Home = () => {
   }
 
   return (
-    <div className="window">
-      <div className="container">
+
+    <Paint>
         <h1 className="title">Memotest</h1>
         <h2 className="subtitle">Find the matching css standar color and it's hexcode! </h2>
          <div className="options"> 
@@ -37,8 +38,7 @@ const Home = () => {
           </div>
           <div className="button" onClick={goToBoard}>Start Game</div>
         </div>
-      </div>
-    </div>
+    </Paint>
   );
 };
 
