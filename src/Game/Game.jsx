@@ -1,5 +1,6 @@
 import React from "react";
 import Board from "../Components/Board";
+import Winning from "../Components/Winning";
 import { useParams } from "react-router-dom";
 import "./Game.css";
 
@@ -78,13 +79,16 @@ switch (difficulty) {
     break;
 }
 
-
-
+const gameOver = true;
+const winner = "p-one";
 
   return (
-    <div>
+    <>
+    <div className="background-game">
       <Board size ={size} list={list} numOfPlayers={numOfPlayers} />
     </div>
+    {gameOver ? <Winning winner={winner} /> : null}
+    </>
   );
 };
 
