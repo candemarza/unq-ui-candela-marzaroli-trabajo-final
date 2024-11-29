@@ -1,7 +1,11 @@
-/*body {
-    background-image: url('../assets/back-2.png');
+.background-game{
+    background-image: url('/assets/back-2.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-*/

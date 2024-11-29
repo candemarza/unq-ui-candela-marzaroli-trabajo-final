@@ -105,7 +105,7 @@ const Board = ({list, size, numOfPlayers}) => {
       case score < score2:
         return "p-two";
       default:
-        return "match";
+        return "w-match";
     }
   }
   
