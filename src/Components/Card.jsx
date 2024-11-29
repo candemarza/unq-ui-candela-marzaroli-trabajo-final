@@ -15,7 +15,7 @@ const Card = ({ handleCardFlip, card, isShowing }) => {
         }`}
       >
         <div className="card-front">
-          <img className="card-logo" src={"/color.svg"} />
+          <img className="card-logo" src={"/color-cat.png"} />
         </div>
         <div className="card-back" style={isHex ? { backgroundColor: card.color.value } : {}}>
           {isHex ? null : (
