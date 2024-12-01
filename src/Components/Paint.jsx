@@ -64,42 +64,39 @@ const Paint = ({ children }) => {
           <div className="paint-mainColors">
             <div
               className="color main c-one"
-              style={{ backgroundColor: "#000" }}
+              style={{ backgroundColor: "#010100" }}
             ></div>
             <div
               className="color main c-two"
-              style={{ backgroundColor: "#fff" }}
+              style={{ backgroundColor: "#fffefe" }}
             ></div>
           </div>
           <div className="all-colors">
-            <div className="color" style={{ backgroundColor: "#000" }} />
-            <div className="color" style={{ backgroundColor: "#808080" }} />
-            <div className="color" style={{ backgroundColor: "#800000" }} />
-            <div className="color" style={{ backgroundColor: "#808000" }} />
-            <div className="color" style={{ backgroundColor: "#008000" }} />
-            <div className="color" style={{ backgroundColor: "#008080" }} />
-            <div className="color" style={{ backgroundColor: "#000080" }} />
-            <div className="color" style={{ backgroundColor: "#800080" }} />
-            <div className="color" style={{ backgroundColor: "#808040" }} />
-            <div className="color" style={{ backgroundColor: "#004040" }} />
-            <div className="color" style={{ backgroundColor: "#0080FF" }} />
-            <div className="color" style={{ backgroundColor: "#004080" }} />
-            <div className="color" style={{ backgroundColor: "#4000FF" }} />
-            <div className="color" style={{ backgroundColor: "#804000" }} />
-            <div className="color" style={{ backgroundColor: "#FFF" }} />
-            <div className="color" style={{ backgroundColor: "#C0C0C0" }} />
-            <div className="color" style={{ backgroundColor: "#f00" }} />
-            <div className="color" style={{ backgroundColor: "#FF0" }} />
-            <div className="color" style={{ backgroundColor: "#0F0" }} />
-            <div className="color" style={{ backgroundColor: "#0FF" }} />
-            <div className="color" style={{ backgroundColor: "#00F" }} />
-            <div className="color" style={{ backgroundColor: "#F0F" }} />
-            <div className="color" style={{ backgroundColor: "#FFFF80" }} />
-            <div className="color" style={{ backgroundColor: "#00FF80" }} />
-            <div className="color" style={{ backgroundColor: "#80FFFF" }} />
-            <div className="color" style={{ backgroundColor: "#8080FF" }} />
-            <div className="color" style={{ backgroundColor: "#FF0080" }} />
-            <div className="color" style={{ backgroundColor: "#FF8040" }} />
+            <div className="color" style={{ backgroundColor: "#010100" }} />
+            <div className="color" style={{ backgroundColor: "#887e7d" }} />
+            <div className="color" style={{ backgroundColor: "#731f41" }} />
+            <div className="color" style={{ backgroundColor: "#af3762" }} />
+            <div className="color" style={{ backgroundColor: "#2e555c" }} />
+            <div className="color" style={{ backgroundColor: "#1d4e8e" }} />
+            <div className="color" style={{ backgroundColor: "#5c96a2" }} />
+            <div className="color" style={{ backgroundColor: "#8507c2" }} />
+            <div className="color" style={{ backgroundColor: "#2a17d5" }} />
+            <div className="color" style={{ backgroundColor: "#3d545c" }} />
+            <div className="color" style={{ backgroundColor: "#2e454d" }} />
+            <div className="color" style={{ backgroundColor: "#a884b6" }} />
+            
+            <div className="color" style={{ backgroundColor: "#fffefe" }} />
+            <div className="color" style={{ backgroundColor: "#cbbdbc" }} />
+            <div className="color" style={{ backgroundColor: "#e74183" }} />
+            <div className="color" style={{ backgroundColor: "#f4a5a5" }} />
+            <div className="color" style={{ backgroundColor: "#81d0f1" }} />
+            <div className="color" style={{ backgroundColor: "#58a8f1" }} />
+            <div className="color" style={{ backgroundColor: "#d4f2fc" }} />
+            <div className="color" style={{ backgroundColor: "#cc7cf5" }} />
+            <div className="color" style={{ backgroundColor: "#6f7df7" }} />
+            <div className="color" style={{ backgroundColor: "#9bd5eb" }} />
+            <div className="color" style={{ backgroundColor: "#59bfef" }} />
+            <div className="color" style={{ backgroundColor: "#ebd5f4" }} />
           </div>
         </div>
       </div>

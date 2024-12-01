@@ -1,9 +1,9 @@
 .paint-window {
-  background-color: #d6d3ce;
-  border-top: 3px solid #f0efed;
-  border-left: 3px solid #f0efed;
-  border-bottom: 3px solid #807f7f;
-  border-right: 3px solid #807f7f;
+  background-color: #d1d4d3;
+  border-top: 3px solid #edf0ef;
+  border-left: 3px solid #edf0ef;
+  border-bottom: 3px solid #7f8080;
+  border-right: 3px solid #7f8080;
   box-shadow: 1px 1px 5px #00000052;
   width: 70vw;
   height: 80hw;
@@ -11,8 +11,8 @@
 }
 
 .paint-titleBar {
-  background-color: #00007d;
-  color: #f0efed;
+  background-color: #5e069e;
+  color: #edf0ef;
   display: flex;
   padding: 5px;
 }
@@ -33,11 +33,11 @@
   height: 25px;
   width: 25px;
   color: #0d002e;
-  background-color: #d3ced6;
-  border-top: 2px solid #f0efed;
-  border-left: 2px solid #f0efed;
-  border-bottom: 2px solid #807f7f;
-  border-right: 2px solid #807f7f;
+  background-color: #d1d4d3;
+  border-top: 2px solid #edf0ef;
+  border-left: 2px solid #edf0ef;
+  border-bottom: 2px solid #7f8080;
+  border-right: 2px solid #7f8080;
 }
 
 .paint-button {
@@ -54,8 +54,8 @@
   display: flex;
   padding: 5px;
   gap: 15px;
-  border-bottom: 2px solid #807f7f;
-  box-shadow: 0px 2px 0px #f0efed;
+  border-bottom: 2px solid #7f8080;
+  box-shadow: 0px 2px 0px #edf0ef;
 }
 
 .paint-config::first-letter {
@@ -86,11 +86,11 @@
   height: 25px;
   width: 25px;
   color: #0d002e;
-  background-color: #d3ced6;
-  border-top: 2px solid #f0efed;
-  border-left: 2px solid #f0efed;
-  border-bottom: 2px solid #807f7f;
-  border-right: 2px solid #807f7f;
+  background-color: #d1d4d3;
+  border-top: 2px solid #edf0ef;
+  border-left: 2px solid #edf0ef;
+  border-bottom: 2px solid #7f8080;
+  border-right: 2px solid #7f8080;
 }
 
 .paint-tools img:hover {
@@ -111,13 +111,13 @@
 
 .paint-canvas-greySpace {
   width: 100%;
-  background-color: #807f7f;
+  background-color: #7f8080;
   align-content: center;
   justify-content: center;
-  border-top: 3px solid #807f7f;
-  border-left: 3px solid #807f7f;
-  border-bottom: 3px solid #f0efed;
-  border-right: 3px solid #f0efed;
+  border-top: 3px solid #7f8080;
+  border-left: 3px solid #7f8080;
+  border-bottom: 3px solid #edf0ef;
+  border-right: 3px solid #edf0ef;
   box-shadow: -1px -1px 0px #000000, 1px 1px 0px #838383;
   display: flex;
   align-items: flex-start;
@@ -125,10 +125,10 @@
 }
 
 .paint-weirdSideRectangle {
-  border-top: 2px solid #807f7f;
-  border-left: 2px solid #807f7f;
-  border-bottom: 2px solid #f0efed;
-  border-right: 2px solid #f0efed;
+  border-top: 2px solid #7f8080;
+  border-left: 2px solid #7f8080;
+  border-bottom: 2px solid #edf0ef;
+  border-right: 2px solid #edf0ef;
   height: 16vh;
   margin: 1.9vh 1vh;
   margin-bottom: 30px;
@@ -138,8 +138,8 @@
   display: flex;
   padding: 10px;
   align-items: center;
-  border-top: 2px solid #f0efed;
-  box-shadow: 0px -2px 0px #807f7f;
+  border-top: 2px solid #edf0ef;
+  box-shadow: 0px -2px 0px #7f8080;
 }
 
 .paint-mainColors {
@@ -149,10 +149,10 @@
   width: 40px;
   border-top: 2px solid #000000;
   border-left: 2px solid #000000;
-  border-bottom: 2px solid #807f7f;
-  border-right: 2px solid #807f7f;
+  border-bottom: 2px solid #7f8080;
+  border-right: 2px solid #7f8080;
   box-shadow: 0px 2px 0px #ffffff, 2px 0px 0px #ffffff, 2px 2px 0px #ffffff,
-    0px -2px 0px #807f7f, -2px 0px 0px #807f7f, -2px -2px 0px #807f7f;
+    0px -2px 0px #7f8080, -2px 0px 0px #7f8080, -2px -2px 0px #7f8080;
   margin-right: 10px;
   position: relative;
 }
@@ -163,12 +163,12 @@
   border-top: 1px solid #000000;
   border-left: 1px solid #000000;
   box-shadow: 0px 1px 0px #ffffff, 1px 0px 0px #ffffff, 1px 1px 0px #ffffff,
-    0px -1px 0px #807f7f, -1px 0px 0px #807f7f, -1px -1px 0px #807f7f;
+    0px -1px 0px #7f8080, -1px 0px 0px #7f8080, -1px -1px 0px #7f8080;
 }
 
 .main {
   border: 2px solid #c9c9c9;
-  box-shadow: 0px 2px 0px #807f7f, 2px 0px 0px #807f7f, 2px 2px 0px #807f7f,
+  box-shadow: 0px 2px 0px #7f8080, 2px 0px 0px #7f8080, 2px 2px 0px #7f8080,
     0px -2px 0px #ebebeb, -2px 0px 0px #ebebeb, -2px -2px 0px #ebebeb;
 }
 
@@ -182,7 +182,7 @@
 
 .all-colors {
   display: grid;
-  grid-template-columns: repeat(14, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   gap: 3px;
   background-color: #ffffff;
 }
