@@ -8,6 +8,7 @@
   position: absolute;
   top: 0;
   backdrop-filter: blur(2px);
+  z-index: 1;
 }
 
 .win-windows {
@@ -19,56 +20,56 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  z-index: 1;
+  z-index: 2;
 }
 
 .w-two {
   position: absolute;
   top: 20px;
   left: 20px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .w-three {
   position: absolute;
   top: 40px;
   left: 40px;
-  z-index: 3;
+  z-index: 4;
 }
 
 .w-four {
   position: absolute;
   top: 60px;
   left: 60px;
-  z-index: 4;
+  z-index: 5;
 }
 
 .w-five {
   position: absolute;
   top: 80px;
   left: 80px;
-  z-index: 5;
+  z-index: 6;
 }
 
 .w-six {
   position: absolute;
   top: 100px;
   left: 100px;
-  z-index: 6;
+  z-index: 7;
 }
 
 .w-seven {
   position: absolute;
   top: 120px;
   left: 120px;
-  z-index: 7;
+  z-index: 8;
 }
 
 .w-eight {
   position: absolute;
   top: 140px;
   left: 140px;
-  z-index: 8;
+  z-index: 9;
 }
 
 .win-score-board {
@@ -114,7 +115,10 @@
   margin-left: auto;
   cursor: pointer;
   font-size: 13px;
-  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*mover la fuckin cruzzzz*/
 }
 
 .win-screen {
@@ -127,15 +131,37 @@
   align-self: flex-start;
 }
 
-.win-back-button {
-  width: 40%;
+.win-buttons{
+  display: flex;
+  gap: 10px;
   align-self: center;
+}
+
+.win-back-button {
+  width: 120px;
+  height: 25px;
   margin-top: 15px;
   background-color: #d6d3ce;
   border-top: 1px solid #b3b2b0;
   border-left: 1px solid #b3b2b0;
-  border-bottom: 2px solid #424242;
-  border-right: 2px solid #424242;
-  box-shadow: 0px 0px 3px #000000;
+  border-bottom: 2px solid #666565;
+  border-right: 2px solid #666565;
+  box-shadow: 0px 0px 3px #00000075;
+  cursor: pointer;
+}
+
+.win-home-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  height: 25px;
+  width: 25px;
+  background-color: #d6d3ce;
+  border-top: 1px solid #b3b2b0;
+  border-left: 1px solid #b3b2b0;
+  border-bottom: 2px solid #666565;
+  border-right: 2px solid #666565;
+  box-shadow: 0px 0px 3px #00000075;
   cursor: pointer;
 }

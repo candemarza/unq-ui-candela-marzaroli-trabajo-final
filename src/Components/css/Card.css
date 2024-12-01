@@ -34,12 +34,15 @@
 
 .card-front {
     background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-logo{
-    width: 100%;
+    width: 80%;
     object-fit: cover;
-    
+
 }
 
 .card-back {

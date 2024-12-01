@@ -1,5 +1,3 @@
-
-
 .game-container{
     display: flex;
     direction: row;
@@ -31,3 +29,28 @@
 .eightByEight{
     grid-template-columns: repeat(8, 1fr);
 }
+
+.back-button, .restart-button{
+    width: 30px;
+    height: 30px;
+    background-color: #75e3ff;
+    border-top: 3px solid #bdf2ff;
+    border-left: 3px solid #bdf2ff;
+    border-bottom: 3px solid #3ea1b9;
+    border-right: 3px solid #3ea1b9;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    cursor: pointer;
+}
+
+.control-buttons{
+    display: flex;
+    padding: 40px;
+    gap: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+

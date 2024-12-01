@@ -132,11 +132,13 @@ const Game = ({ list, size, numOfPlayers, pairs, onBackToHome }) => {
     <>
       <div className="game-container">
         <div className="scoreBoard-container">
-          <div className="restart" onClick={handleRestart}>
-            <GrPowerReset />
-          </div>
-          <div className="back" onClick={onBackToHome}>
-            <GoHomeFill />
+          <div className="control-buttons">
+            <div className="restart-button" onClick={handleRestart}>
+              <GrPowerReset />
+            </div>
+            <div className="back-button" onClick={onBackToHome}>
+              <GoHomeFill />
+            </div>
           </div>
           <ScoreBoard
             score={score}
