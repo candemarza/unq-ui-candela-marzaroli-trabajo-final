@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import "./Game.css";
 
 
-const Game = () => {
+const Game = ({difficulty, numberOfPlayers}) => { //logica de config
 
 const colorHexDictionary = {
     "Red": "#FF0000",
@@ -44,14 +44,9 @@ const colorHexDictionary = {
     "Chocolate": "#D2691E"
     //hard ^^
   };
+
 const nameList = Object.entries(colorHexDictionary).map(([name, value]) => ({ name, value }));
 const hexList = Object.entries(colorHexDictionary).map(([name, value]) => ({ name:value, value:name }));
-
-
-//no se si deberian ser params :(
-const params = useParams();
-const difficulty = params.difficulty;
-const numOfPlayers = params.players;
 
 const easyList = [...nameList.slice(0, 8), ...hexList.slice(0, 8)];
 const mediumList = [...nameList.slice(0, 18), ...hexList.slice(0, 18)];
@@ -59,23 +54,28 @@ const hardList = [...nameList.slice(0, 32), ...hexList.slice(0, 32)];
 
 let size;
 let list;
+let pairs
 
 switch (difficulty) {
   case "easy":
-    size = 4;
+    size = "fourByFour";
     list = easyList;
+    pairs = 8;
     break;
   case "medium":
-    size = 6;
+    size = "sixBySix";
     list = mediumList;
+    pairs = 18;
     break;
-  case "hard":
+  case "eightByEight":
     size = 8;
     list = hardList;
+    pairs = 32;
     break;
   default:
-    size = 4;
-    list = easyList;
+    size = 8;
+    list = hardList; 
+    pairs = 32;
     break;
 }
 
@@ -85,7 +85,7 @@ const winner = "p-one";
   return (
     <>
     <div className="background-game">
-      <Board size ={size} list={list} numOfPlayers={numOfPlayers} />
+      <Board size ={size} list={list} numOfPlayers={numberOfPlayers} amountOfPairs={pairs}/>
     </div>
     {gameOver ? <Winning winner={winner} /> : null}
     </>

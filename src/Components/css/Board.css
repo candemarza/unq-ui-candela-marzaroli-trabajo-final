@@ -6,7 +6,6 @@
     padding: none;
     margin: none;
     gap : 2vh;
-
 }
 
 .scoreBoard-container{
@@ -17,4 +16,16 @@
 .board{
     display: grid;
     grid-gap: 12px;
+}
+
+.fourByFour{
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.sixBySix{
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.eightByEight{
+    grid-template-columns: repeat(8, 1fr);
 }
