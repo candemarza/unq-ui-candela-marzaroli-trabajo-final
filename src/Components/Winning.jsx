@@ -1,8 +1,8 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import "./css/Winning.css";
+import { GoHomeFill } from "react-icons/go";
 
-const Winning = ({ winner }) => {
+const Winning = ({ winner, onRestart, onBackToHome}) => {
   const winnerEmoji = (() => {
     switch (winner) {
       case "p-one":
@@ -24,19 +24,13 @@ const Winning = ({ winner }) => {
       <Window winner={winner} emoji={winnerEmoji} position={"w-five"}/>
       <Window winner={winner} emoji={winnerEmoji} position={"w-six"}/>
       <Window winner={winner} emoji={winnerEmoji} position={"w-seven"}/>
-      <Window winner={winner} emoji={winnerEmoji} position={"w-eight"}/>
+      <Window winner={winner} emoji={winnerEmoji} position={"w-eight"} onRestart={onRestart} onBackToHome={onBackToHome}/>
       </div>
     </div>
   );
 };
 
-const Window = ({ winner, emoji, position }) => {
-  const router = useNavigate();
-  const goHome = () => {
-    router("/");
-    window.location.reload(); //se que no va ver como solucionar D: deberia setear
-    //deberia seter el gameState de Home en 'home' pero como llega ahi desde aca
-  };
+const Window = ({ winner, emoji, position, onRestart, onBackToHome}) => {
   
   return (
     <div className={position}>
@@ -49,8 +43,11 @@ const Window = ({ winner, emoji, position }) => {
       </div>
       <div className="win-screen">
         {winner === "w-match" ? (<div className="win-text"> It was a match {emoji} !!</div>) : <div className="win-text"> You won {emoji} !!</div>}
-        <div className="win-back-button" onClick={goHome}>
+        <div className="win-back-button" onClick={onRestart}>
           Play Again?
+        </div>
+        <div className="win-back-button" onClick={onBackToHome}>
+          <GoHomeFill />
         </div>
       </div>
     </div>

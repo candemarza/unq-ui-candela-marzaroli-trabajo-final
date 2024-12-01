@@ -41,6 +41,10 @@ const Home = () => { //elegir como jugar y empezar
     setGameState("gameStart");
   }
 
+  const handleBackToHome = () => {
+    setGameState("home");
+  }
+
   const colorHexDictionary = {
     "Red": "#FF0000",
     "Orange": "#FFA500",
@@ -105,7 +109,7 @@ const Home = () => { //elegir como jugar y empezar
     </div>
     ) : (
       <div className="background-game">
-        <Game list={gameList} numOfPlayers={numberOfPlayers} size={gameSize} pairs={gamePairs}/>
+        <Game list={gameList} numOfPlayers={numberOfPlayers} size={gameSize} pairs={gamePairs} onBackToHome={handleBackToHome}/>
       </div>
     )
   );
