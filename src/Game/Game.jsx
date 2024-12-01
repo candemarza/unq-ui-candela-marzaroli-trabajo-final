@@ -79,7 +79,7 @@ switch (difficulty) {
     break;
 }
 
-const gameOver = true;
+const gameOver = false;
 const winner = "p-one";
 
   return (
