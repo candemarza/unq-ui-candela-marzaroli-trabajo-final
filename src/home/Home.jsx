@@ -1,16 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import "./Home.css";
 import Paint from "../components/Paint";
 import Game from "../Game/Game";
 
 const Home = () => { //elegir como jugar y empezar
-  const [difficulty, setDifficulty] = useState("easy");
   const [numberOfPlayers, setNumberOfPlayers] = useState(1);
   const [gameState, setGameState] = useState("home");
+  const [gameList, setGameList] = useState();
+  const [gameSize, setGameSize] = useState("fourByFour");
+  const [gamePairs, setGamePairs] = useState(8);
 
-  const selectDifficulty = (level) => () => {
-    setDifficulty(level);
+  useEffect(() => {
+    setGameList([...nameList.slice(0, 8), ...hexList.slice(0, 8)]);
+  }, []);
+
+  const selectDifficultyEasy = () => () => {
+    setGameList([...nameList.slice(0, 8), ...hexList.slice(0, 8)]);
+    setGamePairs(8);
+    setGameSize("fourByFour");
+  }
+
+  const selectDifficultyMedium = () => () => {
+    setGameList([...nameList.slice(0, 18), ...hexList.slice(0, 18)]);
+    setGamePairs(18);
+    setGameSize("sixBySix");
+  }
+
+  const selectDifficultyHard = () => () => {
+    setGameList([...nameList.slice(0, 32), ...hexList.slice(0, 32)]);
+    setGamePairs(32);
+    setGameSize("eightByEight");
   }
 
   const selectNumberOfPlayers = (num) => () => {
@@ -21,6 +41,48 @@ const Home = () => { //elegir como jugar y empezar
     setGameState("gameStart");
   }
 
+  const colorHexDictionary = {
+    "Red": "#FF0000",
+    "Orange": "#FFA500",
+    "Yellow": "#FFFF00",
+    "Green": "#008000",
+    "Cyan": "#00FFFF",
+    "Blue": "#0000FF",
+    "Purple": "#800080",
+    "Magenta": "#FF00FF",
+    //easy ^^
+    "Slate Gray": "#708090",
+    "Fire Brick": "#B22222",
+    "Khaki": "#F0E68C",
+    "Yellow Green": "#9ACD32",
+    "Dark Cyan": "#008B8B",
+    "Ghost White": "#F8F8FF",
+    "Rebecca Purple": "#663399",
+    "Orchid": "#DA70D6",
+    "Medium Violet Red": "#C71585",
+    "Midnight Blue": "#191970",
+    //medium ^^
+    "Tomato": "#FF6347",
+    "Spring Green": "#00FF7F",
+    "Dark Turquoise": "#00CED1",
+    "Medium Purple": "#9370DB",
+    "Royal Blue": "#4169E1",
+    "Saddle Brown": "#8B4513",
+    "Indigo": "#4B0082",
+    "Sea Green": "#2E8B57",
+    "Pink": "#FFBEC2",
+    "Golden Rod": "#DAA520",
+    "Thistle": "#D8BFD8",
+    "Light Coral": "#F08080",
+    "Olive Drab": "#6B8E23",
+    "Chocolate": "#D2691E"
+    //hard ^^
+  };
+
+  const nameList = Object.entries(colorHexDictionary).map(([name, value]) => ({ name, value }));
+  const hexList = Object.entries(colorHexDictionary).map(([name, value]) => ({ name:value, value:name }));
+
+
   return (
     gameState === "home" ? (
     <div className="background-home">
@@ -29,9 +91,9 @@ const Home = () => { //elegir como jugar y empezar
         <h2 className="subtitle">Find the matching css standar color and it's hexcode! </h2>
          <div className="options"> 
           <div className="difficulty">
-            <div className={`button ${difficulty === "easy" ? "selected" : ""}`} onClick={selectDifficulty("easy")}>Easy</div>
-            <div className={`button ${difficulty === "medium" ? "selected" : ""}`} onClick={selectDifficulty("medium")}>Medium</div>
-            <div className={`button ${difficulty === "hard" ? "selected" : ""}`} onClick={selectDifficulty("hard")}>Hard</div>
+            <div className={`button ${gamePairs === 8 ? "selected" : ""}`} onClick={selectDifficultyEasy()}>Easy</div>
+            <div className={`button ${gamePairs === 18 ? "selected" : ""}`} onClick={selectDifficultyMedium()}>Medium</div>
+            <div className={`button ${gamePairs === 32 ? "selected" : ""}`} onClick={selectDifficultyHard()}>Hard</div>
           </div>
           <div className="numberOfPlayers">
             <div className={`button ${numberOfPlayers === 1 ? "selected" : ""}`} onClick={selectNumberOfPlayers(1)}>1 player</div>
@@ -42,7 +104,9 @@ const Home = () => { //elegir como jugar y empezar
     </Paint>
     </div>
     ) : (
-        <Game difficulty={difficulty} numberOfPlayers={numberOfPlayers}/>
+      <div className="background-game">
+        <Game list={gameList} numOfPlayers={numberOfPlayers} size={gameSize} pairs={gamePairs}/>
+      </div>
     )
   );
 };

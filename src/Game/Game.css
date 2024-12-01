@@ -1,11 +1,33 @@
-.background-game{
-    background-image: url('/assets/back-2.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100vw;
+
+
+.game-container{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    direction: row;
+    justify-content: space-between;
+    height: 90vh;
+    padding: none;
+    margin: none;
+    gap : 2vh;
+}
+
+.scoreBoard-container{
+    align-content: center;
+    width: 30vw;
+}
+
+.board{
+    display: grid;
+    grid-gap: 12px;
+}
+
+.fourByFour{
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.sixBySix{
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.eightByEight{
+    grid-template-columns: repeat(8, 1fr);
 }

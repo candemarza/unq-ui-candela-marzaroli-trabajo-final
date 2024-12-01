@@ -1,10 +1,7 @@
 import "./css/Paint.css";
-import "../Home/Home.css";
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 
-//tool selected es chosen para estilo :P
+
 const Paint = ({ children }) => {
   return (
     <>

@@ -26,10 +26,10 @@
 .paint-buttons {
   display: flex;
   margin-left: auto;
+  cursor: default;
 }
 
-.paint-button,
-.paint-tool {
+.paint-button {
   height: 25px;
   width: 25px;
   color: #0d002e;
@@ -38,15 +38,6 @@
   border-left: 2px solid #f0efed;
   border-bottom: 2px solid #807f7f;
   border-right: 2px solid #807f7f;
-}
-
-.chosen {
-  background-color: #fff;
-  border-top: 2px solid #000000;
-  border-left: 2px solid #000000;
-  border-bottom: 2px solid #fff;
-  border-right: 2px solid #fff;
-  box-shadow: 2px 0px 0px #fff, 0px 2px 0px #fff;
 }
 
 .paint-button {
@@ -68,6 +59,12 @@
 
 .paint-config::first-letter {
   text-decoration: underline;
+}
+
+.paint-config:hover {
+  font-weight: bold;
+  box-sizing: border-box;
+  cursor: default;
 }
 
 .paint-middle {
@@ -93,6 +90,16 @@
   border-left: 2px solid #f0efed;
   border-bottom: 2px solid #807f7f;
   border-right: 2px solid #807f7f;
+}
+
+.paint-tools img:hover {
+  background-image: url(assets/paint-tools/selected-bg.png);
+  background-size: 20px;
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  box-shadow: 2px 0px 0px #fff, 0px 2px 0px #fff;
 }
 
 .paint-canvas {

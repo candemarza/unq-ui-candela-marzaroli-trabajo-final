@@ -1,95 +1,127 @@
 import React from "react";
-import Board from "../Components/Board";
-import Winning from "../Components/Winning";
-import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 import "./Game.css";
+import Card from "../Components/Card";
+import ScoreBoard from "../Components/ScoreBoard";	
+import Winning from "../Components/Winning";
 
+const Game = ({list, size, numOfPlayers, amountOfPairs}) => {//logica de el jeugo en si
+  const [shuffledCards, setShuffledCards] = useState([]);
+  const [cardFlipped, setCardFlipped] = useState(null);
+  const [isShowing, setIsShowing] = useState(false);
+  const [score, setScore] = useState(0);
+  const [score2, setScore2] = useState(0);
+  const [player1turn, setPlayer1Turn] = useState(true);
+  const [gameOver, setGameOver] = useState(false);
+  
 
-const Game = ({difficulty, numberOfPlayers}) => { //logica de config
+  useEffect(() => { //set de inicio de juego
+    const shuffledList = list
+    console.log(numOfPlayers)
+    setShuffledCards(
+      shuffledList.map((color, i) => ({ index: i, color, flipped: false, matched:false}))
+    );
+    setScore(0); //ta feo
+    setScore2(0);
+    setPlayer1Turn(true);
+    setGameOver(false);
+    setCardFlipped(null);
+    setGameOver(false);
+    setIsShowing(false);
+  }, []); 
 
-const colorHexDictionary = {
-    "Red": "#FF0000",
-    "Orange": "#FFA500",
-    "Yellow": "#FFFF00",
-    "Green": "#008000",
-    "Cyan": "#00FFFF",
-    "Blue": "#0000FF",
-    "Purple": "#800080",
-    "Magenta": "#FF00FF",
-    //easy ^^
-    "Slate Gray": "#708090",
-    "Fire Brick": "#B22222",
-    "Khaki": "#F0E68C",
-    "Yellow Green": "#9ACD32",
-    "Dark Cyan": "#008B8B",
-    "Ghost White": "#F8F8FF",
-    "Rebecca Purple": "#663399",
-    "Orchid": "#DA70D6",
-    "Medium Violet Red": "#C71585",
-    "Midnight Blue": "#191970",
-    //medium ^^
-    "Tomato": "#FF6347",
-    "Spring Green": "#00FF7F",
-    "Dark Turquoise": "#00CED1",
-    "Medium Purple": "#9370DB",
-    "Royal Blue": "#4169E1",
-    "Saddle Brown": "#8B4513",
-    "Indigo": "#4B0082",
-    "Sea Green": "#2E8B57",
-    "Pink": "#FFBEC2",
-    "Golden Rod": "#DAA520",
-    "Thistle": "#D8BFD8",
-    "Light Coral": "#F08080",
-    "Olive Drab": "#6B8E23",
-    "Chocolate": "#D2691E"
-    //hard ^^
+  const shuffle = (array) => { //cosa de matematica para mezclarlas 
+    for (let i = array.length - 1; i > 0; i--) { 
+      const j = Math.floor(Math.random() * (i + 1)); 
+      [array[i], array[j]] = [array[j], array[i]]; 
+    } 
+    return array; 
+  }; 
+
+  const handleCardFlip = (card) => { //que pasa cuando jeugo
+    
+    //muestro la carta girada
+    const newFlippedCard = { ...card, flipped: true };
+    const boardCopy = [...shuffledCards];
+    boardCopy[card.index] = { ...boardCopy[card.index], flipped: true };
+    setShuffledCards(boardCopy);
+
+    //si no hay otra carta girada, la guardo
+    if (!cardFlipped) {
+      setCardFlipped(newFlippedCard);
+      return;
+    } else { //sino, chequeo
+      checkIfMatch(newFlippedCard, cardFlipped);
+    }
+    
   };
 
-const nameList = Object.entries(colorHexDictionary).map(([name, value]) => ({ name, value }));
-const hexList = Object.entries(colorHexDictionary).map(([name, value]) => ({ name:value, value:name }));
+  const checkIfMatch = (card1, card2) => {
+    if (card1.color.name === card2.color.value) {
+      setCardFlipped(null); //dejo las cartas giradas
+      handleScore() //sumo 1 al puntaje que corresponde
+      const boardCopy = [...shuffledCards];
+      boardCopy[card1.index] = { ...boardCopy[card1.index], flipped: true, matched: true };
+      boardCopy[card2.index] = { ...boardCopy[card2.index], flipped: true, matched: true };
+      setShuffledCards(boardCopy); //las marco que ya estan asi no joden 
+    } else {
+      setIsShowing(true); //para que no me deje girar otra carta antes de que se muestren las dos
+      setTimeout(() => { //giro ambas cartas, despues de 2 segundos
+        const boardCopy = [...shuffledCards];
+        boardCopy[card1.index] = { ...boardCopy[card1.index], flipped: false };
+        boardCopy[card2.index] = { ...boardCopy[card2.index], flipped: false };
+        setShuffledCards(boardCopy); 
+        setCardFlipped(null); //volvemos a iniciar
+        setIsShowing(false); 
+        setPlayer1Turn(!player1turn); //cambio de jugador
+      }, 1000);
+    }
+  }
 
-const easyList = [...nameList.slice(0, 8), ...hexList.slice(0, 8)];
-const mediumList = [...nameList.slice(0, 18), ...hexList.slice(0, 18)];
-const hardList = [...nameList.slice(0, 32), ...hexList.slice(0, 32)];
+  const handleScore = () => {
+    if (Number(numOfPlayers) === 2) {
+      player1turn ? setScore(score + 1) : setScore2(score2 + 1);
+      setPlayer1Turn(!player1turn);
+    }
+    else {
+      setScore(score + 1);
+    }
+  }
+  
+  useEffect(() => {
+    if ((score + score2) === amountOfPairs) {
+      setGameOver(true);
+    }
+  }, [score, score2]);
 
-let size;
-let list;
-let pairs
 
-switch (difficulty) {
-  case "easy":
-    size = "fourByFour";
-    list = easyList;
-    pairs = 8;
-    break;
-  case "medium":
-    size = "sixBySix";
-    list = mediumList;
-    pairs = 18;
-    break;
-  case "eightByEight":
-    size = 8;
-    list = hardList;
-    pairs = 32;
-    break;
-  default:
-    size = 8;
-    list = hardList; 
-    pairs = 32;
-    break;
-}
-
-const gameOver = false;
-const winner = "p-one";
-
+  const winner = () => {
+    switch (true) {
+      case score > score2:
+        return "p-one";
+      case score < score2:
+        return "p-two";
+      default:
+        return "w-match";
+    }
+  }
+  
   return (
     <>
-    <div className="background-game">
-      <Board size ={size} list={list} numOfPlayers={numberOfPlayers} amountOfPairs={pairs}/>
+    <div className="game-container">
+      <div className="scoreBoard-container">
+        <ScoreBoard score={score} score2={score2} numOfPlayers={numOfPlayers} player1turn={player1turn}/>
+      </div>
+      <div className={`board ${size}`}>
+      {shuffledCards.map((card, index) => {
+          return (
+            <Card key={index} card={card} handleCardFlip={handleCardFlip} isShowing={isShowing} />
+          );
+        })}
+      </div>
     </div>
-    {gameOver ? <Winning winner={winner} /> : null}
-    </>
+    {gameOver && <Winning winner={winner()} />}
+    </>    
   );
 };
-
 export default Game;
