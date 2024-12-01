@@ -84,10 +84,26 @@
   box-shadow: 1px 1px 0px #000;
 }
 
+.paint-tools img {
+  height: 25px;
+  width: 25px;
+  color: #0d002e;
+  background-color: #d3ced6;
+  border-top: 2px solid #f0efed;
+  border-left: 2px solid #f0efed;
+  border-bottom: 2px solid #807f7f;
+  border-right: 2px solid #807f7f;
+}
+
 .paint-canvas {
   background-color: #fcf7fa;
+  width: 95%;
+  height: 90%;
+}
 
+.paint-canvas-greySpace {
   width: 100%;
+  background-color: #807f7f;
   align-content: center;
   justify-content: center;
   border-top: 3px solid #807f7f;
@@ -95,6 +111,9 @@
   border-bottom: 3px solid #f0efed;
   border-right: 3px solid #f0efed;
   box-shadow: -1px -1px 0px #000000, 1px 1px 0px #838383;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .paint-weirdSideRectangle {

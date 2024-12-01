@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 //tool selected es chosen para estilo :P
-const Paint = ({children}) => {
+const Paint = ({ children }) => {
   return (
     <>
       <div className="paint-window">
@@ -33,66 +33,27 @@ const Paint = ({children}) => {
         <div className="paint-middle">
           <div className="paint-tools-bar">
             <div className="paint-tools">
-              <img
-                className="paint-tool"
-                src={`assets/paint-tools/star.png`}
-              />
-              <img
-                className="paint-tool"
-                src={`assets/paint-tools/select.png`}
-              />
-              <img
-                className="paint-tool"
-                src={`assets/paint-tools/eraser.png`}
-              />
-              <img
-                className="paint-tool"
-                src={`assets/paint-tools/paint.png`}
-              />
-              <img
-                className="paint-tool"
-                src={`assets/paint-tools/dropper.png`}
-              />
-              <img
-                className="paint-tool"
-                src={`assets/paint-tools/zoom.png`}
-              />
-              <img
-                className="paint-tool"
-                src={`assets/paint-tools/pencil.png`}
-              />
-              <img
-                className="paint-tool"
-                src={`assets/paint-tools/brush.png`}
-              />
-              <img
-                className="paint-tool"
-                src={`assets/paint-tools/spray.png`}
-              />
-              <img className="paint-tool" src={`assets/paint-tools/a.png`} />
-              <img
-                className="paint-tool"
-                src={`assets/paint-tools/straight.png`}
-              />
-              <img className="paint-tool" src={`assets/paint-tools/s.png`} />
-              <img
-                className="paint-tool"
-                src={`assets/paint-tools/rect.png`}
-              />
-              <img className="paint-tool" src={`assets/paint-tools/l.png`} />
-              <img
-                className="paint-tool"
-                src={`assets/paint-tools/oval.png`}
-              />
-              <img
-                className="paint-tool"
-                src={`assets/paint-tools/squoval.png`}
-              />
+              <img src={`assets/paint-tools/star.png`} />
+              <img src={`assets/paint-tools/select.png`} />
+              <img src={`assets/paint-tools/eraser.png`} />
+              <img src={`assets/paint-tools/paint.png`} />
+              <img src={`assets/paint-tools/dropper.png`} />
+              <img src={`assets/paint-tools/zoom.png`} />
+              <img src={`assets/paint-tools/pencil.png`} />
+              <img src={`assets/paint-tools/brush.png`} />
+              <img src={`assets/paint-tools/spray.png`} />
+              <img src={`assets/paint-tools/a.png`} />
+              <img src={`assets/paint-tools/straight.png`} />
+              <img src={`assets/paint-tools/s.png`} />
+              <img src={`assets/paint-tools/rect.png`} />
+              <img src={`assets/paint-tools/l.png`} />
+              <img src={`assets/paint-tools/oval.png`} />
+              <img src={`assets/paint-tools/squoval.png`} />
             </div>
             <div className="paint-weirdSideRectangle" />
           </div>
-          <div className="paint-canvas">
-            {children}
+          <div className="paint-canvas-greySpace">
+            <div className="paint-canvas">{children}</div>
           </div>
         </div>
         <div className="paint-colorBar">
@@ -141,7 +102,5 @@ const Paint = ({children}) => {
     </>
   );
 };
-
-
 
 export default Paint;
