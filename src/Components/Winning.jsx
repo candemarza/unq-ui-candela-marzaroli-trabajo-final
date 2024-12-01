@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/Winning.css";
 import { GoHomeFill } from "react-icons/go";
-import { GrFormClose } from "react-icons/gr";
+import { IoClose } from "react-icons/io5";
 
 const Winning = ({ winner, onRestart, onBackToHome}) => {
   const winnerEmoji = (() => {
@@ -41,16 +41,18 @@ const Window = ({ winner, emoji, position, onRestart, onBackToHome}) => {
         {emoji}
         {emoji}
         <div className="win-bar-button">
-        <GrFormClose />
+        <IoClose />
         </div>
       </div>
       <div className="win-screen">
         {winner === "w-match" ? (<div className="win-text"> It was a match {emoji} !!</div>) : <div className="win-text"> You won {emoji} !!</div>}
-        <div className="win-back-button" onClick={onRestart}>
-          Play Again?
-        </div>
-        <div className="win-back-button" onClick={onBackToHome}>
-          <GoHomeFill />
+        <div className="win-buttons">
+          <div className="win-back-button" onClick={onRestart}>
+            Play Again?
+          </div>
+          <div className="win-home-button" onClick={onBackToHome}>
+            <GoHomeFill />
+          </div>
         </div>
       </div>
     </div>

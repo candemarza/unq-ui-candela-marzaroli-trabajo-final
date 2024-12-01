@@ -1,7 +1,7 @@
 import "./css/Paint.css";
 import React from "react";
 import { FaRegWindowMinimize, FaRegWindowRestore } from "react-icons/fa";
-import { GrFormClose } from "react-icons/gr";
+import { IoClose } from "react-icons/io5";
 
 const Paint = ({ children }) => {
   return (
@@ -22,7 +22,7 @@ const Paint = ({ children }) => {
               <FaRegWindowRestore />
             </div>
             <div className="paint-button x">
-              <GrFormClose />
+            <IoClose/>
             </div>
           </div>
         </div>

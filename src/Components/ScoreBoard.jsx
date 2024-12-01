@@ -1,7 +1,6 @@
 import React from 'react';
 import './css/ScoreBoard.css';
-
-import { GrFormClose } from "react-icons/gr";
+import { IoClose } from "react-icons/io5";
 
 const ScoreBoard = ({ score, score2, numOfPlayers, player1turn}) => {
 
@@ -13,7 +12,7 @@ const ScoreBoard = ({ score, score2, numOfPlayers, player1turn}) => {
             <div className="title-bar">
               Player1
               <div className="bar-button">
-                <GrFormClose />
+                <IoClose/>
               </div>
             </div>
             <div className="screen">
@@ -25,7 +24,7 @@ const ScoreBoard = ({ score, score2, numOfPlayers, player1turn}) => {
             <div className="title-bar two">
               Player2
               <div className="bar-button">
-                <GrFormClose />
+              <IoClose/>
               </div>
             </div>
             <div className="screen">
@@ -39,7 +38,7 @@ const ScoreBoard = ({ score, score2, numOfPlayers, player1turn}) => {
           <div className="title-bar">
             Score
             <div className="bar-button">
-              <GrFormClose />
+            <IoClose/>
             </div>
           </div>
           <div className="screen">
@@ -52,4 +51,4 @@ const ScoreBoard = ({ score, score2, numOfPlayers, player1turn}) => {
   );
 };
 
-export default ScoreBoard;
+export default ScoreBoard; 
