@@ -1,6 +1,8 @@
 import React from 'react';
 import './css/ScoreBoard.css';
 
+import { GrFormClose } from "react-icons/gr";
+
 const ScoreBoard = ({ score, score2, numOfPlayers, player1turn}) => {
 
   return (
@@ -10,7 +12,9 @@ const ScoreBoard = ({ score, score2, numOfPlayers, player1turn}) => {
           <div className={`score-board two-players ${player1turn ? "turn" : ""}`}>
             <div className="title-bar">
               Player1
-              <div className="bar-button">✖</div>
+              <div className="bar-button">
+                <GrFormClose />
+              </div>
             </div>
             <div className="screen">
               <div className="score">🌸 Your score is {score}...</div>
@@ -20,7 +24,9 @@ const ScoreBoard = ({ score, score2, numOfPlayers, player1turn}) => {
           <div className={`score-board two-players second-player ${!player1turn ? "turn" : ""}`}>
             <div className="title-bar two">
               Player2
-              <div className="bar-button">✖</div>
+              <div className="bar-button">
+                <GrFormClose />
+              </div>
             </div>
             <div className="screen">
               <div className="score">🐬 Your score is {score2}...</div>
@@ -32,7 +38,9 @@ const ScoreBoard = ({ score, score2, numOfPlayers, player1turn}) => {
         <div className="score-board">
           <div className="title-bar">
             Score
-            <div className="bar-button">✖</div>
+            <div className="bar-button">
+              <GrFormClose />
+            </div>
           </div>
           <div className="screen">
             <div className="score">🌸 Your score is {score}...</div>

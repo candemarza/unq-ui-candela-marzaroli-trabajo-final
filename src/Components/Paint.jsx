@@ -1,6 +1,7 @@
 import "./css/Paint.css";
 import React from "react";
-
+import { FaRegWindowMinimize, FaRegWindowRestore } from "react-icons/fa";
+import { GrFormClose } from "react-icons/gr";
 
 const Paint = ({ children }) => {
   return (
@@ -14,9 +15,15 @@ const Paint = ({ children }) => {
           />
           <div className="paint-title">ui - Paint</div>
           <div className="paint-buttons">
-            <div className="paint-button">_</div>
-            <div className="paint-button">[]</div>
-            <div className="paint-button x">x</div>
+            <div className="paint-button">
+              <FaRegWindowMinimize />
+            </div>
+            <div className="paint-button">
+              <FaRegWindowRestore />
+            </div>
+            <div className="paint-button x">
+              <GrFormClose />
+            </div>
           </div>
         </div>
         <div className="paint-configBar">
