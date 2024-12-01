@@ -16,17 +16,19 @@ const Board = ({list, size, numOfPlayers, amountOfPairs}) => {//logica de el jeu
   const [gameOver, setGameOver] = useState(false);
   
 
-  useEffect(() => { //set de las cartas en el tablero
+  useEffect(() => { //set de inicio de juego
     const shuffledList = list
     setShuffledCards(
       shuffledList.map((color, i) => ({ index: i, color, flipped: false, matched:false}))
     );
-    setScore(0);
+    setScore(0); //ta feo
     setScore2(0);
     setPlayer1Turn(true);
     setGameOver(false);
     setCardFlipped(null);
-  }, []);
+    setGameOver(false);
+    setIsShowing(false);
+  }, []); 
 
   const shuffle = (array) => { //cosa de matematica para mezclarlas 
     for (let i = array.length - 1; i > 0; i--) { 

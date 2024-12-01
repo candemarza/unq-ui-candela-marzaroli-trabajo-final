@@ -34,8 +34,10 @@ const Window = ({ winner, emoji, position }) => {
   const router = useNavigate();
   const goHome = () => {
     router("/");
+    window.location.reload(); //se que no va ver como solucionar D: deberia setear
+    //deberia seter el gameState de Home en 'home' pero como llega ahi desde aca
   };
-
+  
   return (
     <div className={position}>
     <div className="win-score-board">
@@ -46,7 +48,7 @@ const Window = ({ winner, emoji, position }) => {
         <div className="win-bar-button">✖</div>
       </div>
       <div className="win-screen">
-        {winner === "match" ? (<div className="win-text"> It was a match {emoji} !!</div>) : <div className="win-text"> You won {emoji} !!</div>}
+        {winner === "w-match" ? (<div className="win-text"> It was a match {emoji} !!</div>) : <div className="win-text"> You won {emoji} !!</div>}
         <div className="win-back-button" onClick={goHome}>
           Play Again?
         </div>
