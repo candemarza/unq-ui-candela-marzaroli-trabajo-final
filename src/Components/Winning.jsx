@@ -2,6 +2,7 @@ import React from "react";
 import "./css/Winning.css";
 import { GoHomeFill } from "react-icons/go";
 import { IoClose } from "react-icons/io5";
+import Confetti from "./Confetti";
 
 const Winning = ({ winner, onRestart, onBackToHome}) => {
   const winnerEmoji = (() => {
@@ -17,6 +18,7 @@ const Winning = ({ winner, onRestart, onBackToHome}) => {
 
   return (
     <div className="win-background">
+      <Confetti winnerEmoji={winnerEmoji} />
       <div className="win-windows">
       <Window winner={winner} emoji={winnerEmoji} position={"w-one"} />
       <Window winner={winner} emoji={winnerEmoji} position={"w-two"}/>

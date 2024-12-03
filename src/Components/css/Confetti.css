@@ -1,0 +1,54 @@
+@keyframes fall {
+    0% {
+      transform: translateY(-100vh) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 1;
+    }
+  }
+
+
+.confetti {
+    position: absolute;
+    top: 0;
+    font-size: 2rem;
+    animation: fall 5s linear infinite;
+  }
+
+.confetti:nth-child(odd) {
+    animation-duration: 3s;
+}
+  
+.confetti:nth-child(even) {
+    animation-duration: 4s;
+}
+
+.con-1, .con-9  {  animation-delay: 0s; }
+.con-2, .con-10 {  animation-delay: 0.5s; }
+.con-3, .con-11 {  animation-delay: 1s; }
+.con-4, .con-12 {  animation-delay: 1.5s; }
+.con-5, .con-13 {  animation-delay: 2s; }
+.con-6, .con-14 {  animation-delay: 2.5s; }
+.con-7, .con-15 {  animation-delay: 3s; }
+.con-8, .con-16 {  animation-delay: 3.5s; }
+
+.con-1 { left: 6.25%; }
+.con-2 { left: 12.5%; }
+.con-3 { left: 18.75%; }
+.con-4 { left: 25%; }
+.con-5 { left: 31.25%; }
+.con-6 { left: 37.5%; }
+.con-7 { left: 43.75%; }
+.con-8 { left: 50%; }
+.con-9 { left: 56.25%; }
+.con-10 { left: 62.5%; }
+.con-11 { left: 68.75%; }
+.con-12 { left: 75%; }
+.con-13 { left: 81.25%; }
+.con-14 { left: 87.5%; }
+.con-15 { left: 93.75%; }
+.con-16 { left: 100%; }
+
+
