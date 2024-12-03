@@ -99,12 +99,12 @@ const Game = ({ list, size, numOfPlayers, pairs, onBackToHome }) => {
   };
 
   const handleScore = () => {
-    if (Number(numOfPlayers) === 2) {
-      player1turn ? setScore(score + 1) : setScore2(score2 + 1);
-      setPlayer1Turn(!player1turn);
+    if ((Number(numOfPlayers) === 2) && (!player1turn)) {
+      setScore2(score2 + 1);
     } else {
       setScore(score + 1);
     }
+    setPlayer1Turn(!player1turn);
   };
 
   useEffect(() => {

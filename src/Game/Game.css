@@ -54,8 +54,8 @@
 }
 
 .back-button, .restart-button{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background-color: #75e3ff;
     border-top: 3px solid #bdf2ff;
     border-left: 3px solid #bdf2ff;
@@ -65,6 +65,13 @@
     justify-content: center;
     align-items: center;   
     cursor: pointer;
+}
+
+@media (max-width: 666px) {
+    .back-button, .restart-button{
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .control-buttons{
