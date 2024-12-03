@@ -5,8 +5,8 @@
     height: 90vh;
     padding: none;
     margin: none;
-    gap : 2vh;
 }
+
 
 @media (max-width: 666px) {
     .game-container{
@@ -16,6 +16,7 @@
         justify-content: center;
     }
 }
+
 
 .scoreBoard-container{
     align-content: center;
@@ -81,6 +82,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 2;
 }
 
 @media (max-width: 666px) {
