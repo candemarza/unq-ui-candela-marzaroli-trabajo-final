@@ -108,9 +108,7 @@ const Game = ({ list, size, numOfPlayers, pairs, onBackToHome }) => {
   };
 
   useEffect(() => {
-    if (score + score2 === pairs) {
-      setGameOver(true);
-    }
+    setGameOver(score + score2 === pairs);
   }, [score, score2]);
 
   const winner = () => {
