@@ -82,7 +82,6 @@ const Paint = ({ children }) => {
             <div className="color" style={{ backgroundColor: "#8507c2" }} />
             <div className="color" style={{ backgroundColor: "#2a17d5" }} />
             <div className="color" style={{ backgroundColor: "#3d545c" }} />
-            <div className="color" style={{ backgroundColor: "#2e454d" }} />
             <div className="color" style={{ backgroundColor: "#a884b6" }} />
             
             <div className="color" style={{ backgroundColor: "#fffefe" }} />
@@ -95,7 +94,6 @@ const Paint = ({ children }) => {
             <div className="color" style={{ backgroundColor: "#cc7cf5" }} />
             <div className="color" style={{ backgroundColor: "#6f7df7" }} />
             <div className="color" style={{ backgroundColor: "#9bd5eb" }} />
-            <div className="color" style={{ backgroundColor: "#59bfef" }} />
             <div className="color" style={{ backgroundColor: "#ebd5f4" }} />
           </div>
         </div>

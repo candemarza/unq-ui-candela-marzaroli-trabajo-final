@@ -20,8 +20,7 @@ const Game = ({ list, size, numOfPlayers, pairs, onBackToHome }) => {
 
   useEffect(() => {
     //set de inicio de juego
-    const shuffledList = list;
-    console.log(numOfPlayers);
+    const shuffledList = shuffle(list);
     setShuffledCards(
       shuffledList.map((color, i) => ({
         index: i,
@@ -104,7 +103,6 @@ const Game = ({ list, size, numOfPlayers, pairs, onBackToHome }) => {
     } else {
       setScore(score + 1);
     }
-    setPlayer1Turn(!player1turn);
   };
 
   useEffect(() => {

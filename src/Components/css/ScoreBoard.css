@@ -84,6 +84,7 @@
 }
 
 .two-players {
+  position: absolute;
   top: 0;
 }
 
