@@ -71,16 +71,8 @@ const Game = ({ list, size, numOfPlayers, pairs, onBackToHome }) => {
       setCardFlipped(null); //dejo las cartas giradas
       handleScore(); //sumo 1 al puntaje que corresponde
       const boardCopy = [...shuffledCards];
-      boardCopy[card1.index] = {
-        ...boardCopy[card1.index],
-        flipped: true,
-        matched: true,
-      };
-      boardCopy[card2.index] = {
-        ...boardCopy[card2.index],
-        flipped: true,
-        matched: true,
-      };
+      boardCopy[card1.index] = {...boardCopy[card1.index], matched: true, };
+      boardCopy[card2.index] = {...boardCopy[card2.index], matched: true, };
       setShuffledCards(boardCopy); //las marco que ya estan asi no joden
     } else {
       setIsShowing(true); //para que no me deje girar otra carta antes de que se muestren las dos
@@ -92,7 +84,7 @@ const Game = ({ list, size, numOfPlayers, pairs, onBackToHome }) => {
         setShuffledCards(boardCopy);
         setCardFlipped(null); //volvemos a iniciar
         setIsShowing(false);
-        setPlayer1Turn(!player1turn); //cambio de jugador
+        setPlayer1Turn(!player1turn); //cambio de jugador si perdi
       }, 1000);
     }
   };
