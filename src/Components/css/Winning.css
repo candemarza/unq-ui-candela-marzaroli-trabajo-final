@@ -44,6 +44,13 @@
   z-index: 5;
 }
 
+@media (max-width: 1260px) {
+  .w-four, .w-three, .w-two, .w-one {
+    top: 80px;
+    left: 80px;
+  }
+}
+
 .w-five {
   position: absolute;
   top: 80px;
@@ -79,6 +86,15 @@
   border-bottom: 3px solid #807f7f;
   border-right: 3px solid #807f7f;
   width: 300px;
+}
+
+@media (max-width: 1260px) {
+  .win-score-board {
+    width: 98%;
+    justify-self: center;
+    margin-bottom: 40px;
+    margin-left: 20px;
+  }
 }
 
 .win-title-bar {

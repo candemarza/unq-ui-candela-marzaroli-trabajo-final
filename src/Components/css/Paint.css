@@ -6,8 +6,15 @@
   border-right: 3px solid #7f8080;
   box-shadow: 1px 1px 5px #00000052;
   width: 70vw;
-  height: 80hw;
+  height: 80vh;
   max-width: 750px;
+}
+
+@media (max-width: 666px) {
+  .paint-window{
+    width: 90vw;
+    height: 80vh;
+  }
 }
 
 .paint-titleBar {
@@ -107,6 +114,19 @@
   background-color: #fcf7fa;
   width: 95%;
   height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 666px) {
+  .paint-canvas{
+    width: 95%;
+    height: 90%;
+    padding: 5px;
+    gap: 20px
+  }
 }
 
 .paint-canvas-greySpace {

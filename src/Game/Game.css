@@ -8,14 +8,37 @@
     gap : 2vh;
 }
 
+@media (max-width: 666px) {
+    .game-container{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 .scoreBoard-container{
     align-content: center;
     width: 30vw;
 }
 
+@media (max-width: 666px) {
+    .scoreBoard-container{
+        width: 100%;
+        justify-content: center;
+    }
+}
+
 .board{
     display: grid;
     grid-gap: 12px;
+}
+
+@media (max-width: 666px) {
+    .board{
+        width: 95%;
+        justify-content: center;
+    }
 }
 
 .fourByFour{
@@ -51,6 +74,12 @@
     position: absolute;
     top: 0;
     left: 0;
+}
+
+@media (max-width: 666px) {
+    .control-buttons{
+        padding: 20px;
+    }
 }
 
 

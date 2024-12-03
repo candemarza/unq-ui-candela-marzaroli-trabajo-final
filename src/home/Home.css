@@ -12,26 +12,44 @@
 
 .title{
     font-family: 'TANMERINGUE';
-    color: #e2e2e2;
-    text-shadow: 3px 2px #0d002e;
+    color: #0d002e;
+    text-shadow: 2px 1px #af3762;
     font-size: 50px;
-    margin: 0;
+    margin: 0px;
+}
+
+@media (max-width: 666px) {
+    .title{
+        font-size: 35px;
+    }
 }
 
 .subtitle{
     font-family: 'tanpearl';
     font-size: 20px;
-    color: #e2e2e2;
-    text-shadow: 2px 1px #0d002e;
-    width: 70%;
-    margin: 20px 0px;
+    color: #0d002e;
+    margin: 14px 3px;
+}
+
+@media (max-width: 666px) {
+    .subtitle{
+        font-size: 16px;
+    }
 }
 
 .options{
     display: flex;
     flex-direction: column;
-    width: 50%;
-    gap: 10px;
+    width: 100%;
+    max-width: 300px;
+    gap: 15px;
+}
+
+@media (max-width: 666px) {
+    .options{
+        gap: 10px;
+        width: 90%;
+    }
 }
 
 .difficulty{
@@ -39,6 +57,7 @@
     width: 100%;
     gap: 10px;
 }
+
 
 .numberOfPlayers{
     display: flex;
@@ -56,16 +75,23 @@
     width: 100%;
     cursor: pointer;
     box-shadow: 4px 4px #0d002e7a;
+    font-size: 15px;
+}
+
+@media (max-width: 666px) {
+    .button{
+        font-size: 12px;
+        padding:6px 0px;
+    }
 }
 
 .button:hover{
-    background-color: #5a81bb;
+    background-color: #685abb;
     box-shadow: 4px 4px #0d002ebb;
 }
 
 .selected{
     background-color: #875abb;
-    box-shadow: 4px 4px #0d002ebb;
 }
 
 .background-game{
