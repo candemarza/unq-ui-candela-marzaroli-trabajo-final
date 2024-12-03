@@ -71,8 +71,8 @@ const Game = ({ list, size, numOfPlayers, pairs, onBackToHome }) => {
       setCardFlipped(null); //dejo las cartas giradas
       handleScore(); //sumo 1 al puntaje que corresponde
       const boardCopy = [...shuffledCards];
-      boardCopy[card1.index] = {...boardCopy[card1.index], matched: true, };
-      boardCopy[card2.index] = {...boardCopy[card2.index], matched: true, };
+      boardCopy[card1.index] = { ...boardCopy[card1.index], matched: true };
+      boardCopy[card2.index] = { ...boardCopy[card2.index], matched: true };
       setShuffledCards(boardCopy); //las marco que ya estan asi no joden
     } else {
       setIsShowing(true); //para que no me deje girar otra carta antes de que se muestren las dos
@@ -90,7 +90,7 @@ const Game = ({ list, size, numOfPlayers, pairs, onBackToHome }) => {
   };
 
   const handleScore = () => {
-    if ((Number(numOfPlayers) === 2) && (!player1turn)) {
+    if (Number(numOfPlayers) === 2 && !player1turn) {
       setScore2(score2 + 1);
     } else {
       setScore(score + 1);
@@ -135,20 +135,28 @@ const Game = ({ list, size, numOfPlayers, pairs, onBackToHome }) => {
             player1turn={player1turn}
           />
         </div>
-        <div className={`board ${size}`}>
-          {shuffledCards.map((card, index) => {
-            return (
-              <Card
-                key={index}
-                card={card}
-                handleCardFlip={handleCardFlip}
-                isShowing={isShowing}
-              />
-            );
-          })}
+        <div className="board-container">
+          <div className={`board ${size}`}>
+            {shuffledCards.map((card, index) => {
+              return (
+                <Card
+                  key={index}
+                  card={card}
+                  handleCardFlip={handleCardFlip}
+                  isShowing={isShowing}
+                />
+              );
+            })}
+          </div>
         </div>
       </div>
-      {gameOver && <Winning winner={winner()} onRestart={handleRestart} onBackToHome={onBackToHome}/>}
+      {gameOver && (
+        <Winning
+          winner={winner()}
+          onRestart={handleRestart}
+          onBackToHome={onBackToHome}
+        />
+      )}
     </>
   );
 };

@@ -7,7 +7,7 @@ const ScoreBoard = ({ score, score2, numOfPlayers, player1turn}) => {
   return (
     <>
       {Number(numOfPlayers) === 2 ? (
-        <div className='two-player-score'>
+        <div className="two-player-score">
           <div className={`score-board two-players ${player1turn ? "turn" : ""}`}>
             <div className="title-bar">
               Player1

@@ -83,7 +83,6 @@ const Paint = ({ children }) => {
             <div className="color" style={{ backgroundColor: "#2a17d5" }} />
             <div className="color" style={{ backgroundColor: "#3d545c" }} />
             <div className="color" style={{ backgroundColor: "#a884b6" }} />
-            
             <div className="color" style={{ backgroundColor: "#fffefe" }} />
             <div className="color" style={{ backgroundColor: "#cbbdbc" }} />
             <div className="color" style={{ backgroundColor: "#e74183" }} />

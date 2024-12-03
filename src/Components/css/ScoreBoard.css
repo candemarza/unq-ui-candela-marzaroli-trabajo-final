@@ -1,3 +1,10 @@
+.two-player-score {
+  position: relative;
+  background-color: #f06faf;
+  width: 280px;
+  height: 170px;
+}
+
 .score-board{
   background-color: #d6d3ce;
   border-top: 3px solid #f0efed; 
@@ -5,19 +12,37 @@
   border-bottom: 3px solid #807f7f; 
   border-right: 3px solid #807f7f; 
   box-shadow: 1px 1px 5px #00000052;
-  width: 70%;
+  width: 225px;
   height: 115px;
   max-width: 300px;
   transition: width 0.3s ease, height 0.3s ease;
   z-index: 0;
 }
 
+.two-players {
+  position: absolute;
+  top: 0;
+}
+
+
+
+.turn {
+  position: relative;
+  z-index: 1;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.second-player{
+  transform: translateX(30px) translateY(30px);
+}
+
+@media (max-width: 666px) {
+  .second-player{
+  }
+}
+
 @media (max-width: 666px) {
   .score-board{
-    width: 70%;
-    justify-self: center;
-    margin-bottom: 40px;
-    margin-left: 20px;
   }
 }
 
@@ -77,29 +102,4 @@
   cursor: pointer;
   font-size: 14px;
   
-}
-
-.two-player-score {
-  position: relative;
-}
-
-.two-players {
-  position: absolute;
-  top: 0;
-}
-
-.turn {
-  position: relative;
-  z-index: 1;
-  transition: width 0.3s ease, height 0.3s ease;
-}
-
-.second-player{
-  transform: translateX(30px) translateY(30px);
-}
-
-@media (max-width: 666px) {
-  .second-player{
-    transform: translateX(13px) translateY(20px);
-  }
 }
