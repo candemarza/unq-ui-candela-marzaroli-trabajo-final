@@ -26,4 +26,4 @@ npm install
 npm run dev
 ```
 ### 🌼 [Jugar!](http://localhost:5173/)
-El juego estara disponible en el puerto 5173, si ese pueto esta en uso se levantara en otro puerto disponble
+El juego estara disponible en el puerto 5173, si ese pueto esta en uso se levantara en otro puerto disponible
