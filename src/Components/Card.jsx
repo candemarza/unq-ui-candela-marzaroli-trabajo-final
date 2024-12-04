@@ -2,11 +2,13 @@ import React from "react";
 import "./css/Card.css";
 
 const Card = ({ handleCardFlip, card, isShowing }) => {
+
   const flipCard = () => {
     !card.flipped && !isShowing ? handleCardFlip(card) : null;
   };
 
   const isHex = card.color.value.includes("#");
+  
   return (
     <div className="card" onClick={flipCard}>
       <div

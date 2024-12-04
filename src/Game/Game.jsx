@@ -20,8 +20,7 @@ const Game = ({ list, size, numOfPlayers, pairs, onBackToHome }) => {
 
   useEffect(() => {
     //set de inicio de juego
-    //const shuffledList = shuffle(list);
-    const shuffledList = list
+    const shuffledList = shuffle(list);
     setShuffledCards(
       shuffledList.map((color, i) => ({
         index: i,
@@ -76,7 +75,7 @@ const Game = ({ list, size, numOfPlayers, pairs, onBackToHome }) => {
       boardCopy[card2.index] = { ...boardCopy[card2.index], matched: true };
       setShuffledCards(boardCopy); //las marco que ya estan asi no joden
     } else {
-      setIsShowing(true); //para que no me deje girar otra carta antes de que se muestren las dos
+      setIsShowing(true); //para que no me deje girar otra carta antes de que se giren las dos
       setTimeout(() => {
         //giro ambas cartas, despues de 2 segundos
         const boardCopy = [...shuffledCards];

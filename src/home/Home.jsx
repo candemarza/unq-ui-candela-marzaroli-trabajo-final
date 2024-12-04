@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import "./Home.css";
-import Paint from "../components/Paint";
+import Paint from "../Components/Paint";
 import Game from "../Game/Game";
 
 const Home = () => { //elegir como jugar y empezar
@@ -12,23 +12,23 @@ const Home = () => { //elegir como jugar y empezar
   const [gamePairs, setGamePairs] = useState(8);
 
   useEffect(() => {
-    setGameList([...nameList.slice(0, 8), ...hexList.slice(0, 8)]);
+    setGameList(easyGameList);
   }, []);
 
   const selectDifficultyEasy = () => () => {
-    setGameList([...nameList.slice(0, 8), ...hexList.slice(0, 8)]);
+    setGameList(easyGameList);
     setGamePairs(8);
     setGameSize("fourByFour");
   }
 
   const selectDifficultyMedium = () => () => {
-    setGameList([...nameList.slice(0, 18), ...hexList.slice(0, 18)]);
+    setGameList(mediumGameList);
     setGamePairs(18);
     setGameSize("sixBySix");
   }
 
   const selectDifficultyHard = () => () => {
-    setGameList([...nameList.slice(0, 32), ...hexList.slice(0, 32)]);
+    setGameList(hardGameList);
     setGamePairs(32);
     setGameSize("eightByEight");
   }
@@ -85,7 +85,9 @@ const Home = () => { //elegir como jugar y empezar
 
   const nameList = Object.entries(colorHexDictionary).map(([name, value]) => ({ name, value }));
   const hexList = Object.entries(colorHexDictionary).map(([name, value]) => ({ name:value, value:name }));
-
+  const easyGameList = [...nameList.slice(0, 8), ...hexList.slice(0, 8)];
+  const mediumGameList = [...nameList.slice(0, 18), ...hexList.slice(0, 18)];
+  const hardGameList = [...nameList.slice(0, 32), ...hexList.slice(0, 32)];
 
   return (
     gameState === "home" ? (
