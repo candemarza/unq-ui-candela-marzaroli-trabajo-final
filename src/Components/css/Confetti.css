@@ -1,6 +1,9 @@
 @keyframes fall {
     0% {
       transform: translateY(-100vh) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
       opacity: 1;
     }
     100% {
@@ -13,6 +16,7 @@
 .confetti {
     position: absolute;
     top: 0;
+    transform: translateY(-10vh);
     font-size: 2rem;
     animation: fall 5s linear infinite;
   }
@@ -26,13 +30,14 @@
 }
 
 .con-1, .con-9  {  animation-delay: 0s; }
-.con-2, .con-10 {  animation-delay: 0.5s; }
-.con-3, .con-11 {  animation-delay: 1s; }
-.con-4, .con-12 {  animation-delay: 1.5s; }
-.con-5, .con-13 {  animation-delay: 2s; }
-.con-6, .con-14 {  animation-delay: 2.5s; }
-.con-7, .con-15 {  animation-delay: 3s; }
-.con-8, .con-16 {  animation-delay: 3.5s; }
+.con-2, .con-10 {  animation-delay: 0.25s; }
+.con-3, .con-11 {  animation-delay: 0.5s; }
+.con-4, .con-12 {  animation-delay: 0.75s; }
+.con-5, .con-13 {  animation-delay: 1s; }
+.con-6, .con-14 {  animation-delay: 1.25s; }
+.con-7, .con-15 {  animation-delay: 1.5s; }
+.con-8, .con-16 {  animation-delay: 1.75s; }
+
 
 .con-1 { left: 6.25%; }
 .con-2 { left: 12.5%; }
