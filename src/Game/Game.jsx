@@ -23,7 +23,7 @@ const Game = ({ numOfPlayers, onBackToHome, difficulty }) => {
 
   useEffect(() => {
     //set de inicio de juego
-    const shuffledList = shuffle(list);
+    const shuffledList = list;
     setShuffledCards(
       shuffledList.map((color, i) => ({
         index: i,

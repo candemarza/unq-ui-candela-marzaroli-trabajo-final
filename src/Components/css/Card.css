@@ -52,17 +52,28 @@
 }
 
 .color-name{
-    font-size: 95%;
+    font-size: 16px;
     text-wrap: wrap;
     font-weight: 600;
     color: #000000;
     text-shadow: 1px 1px 0px #f0efed31;
 }
+
 .color-hex{
-    font-size: 95%;
+    font-size: 19px;
     font-weight: 500;
     color: #000000;
 }
+
+@media (max-width: 400px) { /* necesitas lupa peero es masoemnos reactive... en 4x4 */
+    .color-name {
+        font-size: 13px
+    }
+    .color-hex {
+        font-size: 15px
+    }
+}
+
 
 .match{
     transform: rotateY(180deg) translateX(-6px) scale(0.7);
