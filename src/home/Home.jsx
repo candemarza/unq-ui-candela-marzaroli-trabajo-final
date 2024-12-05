@@ -7,30 +7,13 @@ import Game from "../Game/Game";
 const Home = () => { //elegir como jugar y empezar
   const [numberOfPlayers, setNumberOfPlayers] = useState(1);
   const [gameState, setGameState] = useState("home");
-  const [gameList, setGameList] = useState();
-  const [gameSize, setGameSize] = useState("fourByFour");
-  const [gamePairs, setGamePairs] = useState(8);
+  const [difficulty, setDifficulty] = useState(null);
+  const [pairs, setPairs] = useState(8);
 
-  useEffect(() => {
-    setGameList(easyGameList);
-  }, []);
 
-  const selectDifficultyEasy = () => () => {
-    setGameList(easyGameList);
-    setGamePairs(8);
-    setGameSize("fourByFour");
-  }
-
-  const selectDifficultyMedium = () => () => {
-    setGameList(mediumGameList);
-    setGamePairs(18);
-    setGameSize("sixBySix");
-  }
-
-  const selectDifficultyHard = () => () => {
-    setGameList(hardGameList);
-    setGamePairs(32);
-    setGameSize("eightByEight");
+  const selectDifficulty = (difficulty) => () => {
+    setDifficulty(difficulty);
+    setPairs(difficulty.pairs);
   }
 
   const selectNumberOfPlayers = (num) => () => {
@@ -85,9 +68,33 @@ const Home = () => { //elegir como jugar y empezar
 
   const nameList = Object.entries(colorHexDictionary).map(([name, value]) => ({ name, value }));
   const hexList = Object.entries(colorHexDictionary).map(([name, value]) => ({ name:value, value:name }));
+
   const easyGameList = [...nameList.slice(0, 8), ...hexList.slice(0, 8)];
   const mediumGameList = [...nameList.slice(0, 18), ...hexList.slice(0, 18)];
   const hardGameList = [...nameList.slice(0, 32), ...hexList.slice(0, 32)];
+
+  const easy = {
+    pairs: 8,
+    size: "fourByFour",
+    list: easyGameList
+  }
+
+  const medium = {
+    pairs: 18,
+    size: "sixBySix",
+    list: mediumGameList
+  }
+
+  const hard = {
+    pairs: 32,
+    size: "eightByEight",
+    list: hardGameList
+  }
+
+  useEffect(() => {
+    setDifficulty(easy);
+  }, []);
+
 
   return (
     gameState === "home" ? (
@@ -97,9 +104,9 @@ const Home = () => { //elegir como jugar y empezar
         <h2 className="subtitle">Find the matching css standar color and it's hexcode! </h2>
          <div className="options"> 
           <div className="difficulty">
-            <div className={`button ${gamePairs === 8 ? "selected" : ""}`} onClick={selectDifficultyEasy()}>Easy</div>
-            <div className={`button ${gamePairs === 18 ? "selected" : ""}`} onClick={selectDifficultyMedium()}>Medium</div>
-            <div className={`button ${gamePairs === 32 ? "selected" : ""}`} onClick={selectDifficultyHard()}>Hard</div>
+            <div className={`button ${pairs === 8  ? "selected" : ""}`} onClick={selectDifficulty(easy)}>Easy</div>
+            <div className={`button ${pairs === 18 ? "selected" : ""}`} onClick={selectDifficulty(medium)}>Medium</div>
+            <div className={`button ${pairs === 32 ? "selected" : ""}`} onClick={selectDifficulty(hard)}>Hard</div>
           </div>
           <div className="numberOfPlayers">
             <div className={`button ${numberOfPlayers === 1 ? "selected" : ""}`} onClick={selectNumberOfPlayers(1)}>1 player</div>
@@ -111,7 +118,7 @@ const Home = () => { //elegir como jugar y empezar
     </div>
     ) : (
       <div className="background-game">
-        <Game list={gameList} numOfPlayers={numberOfPlayers} size={gameSize} pairs={gamePairs} onBackToHome={handleBackToHome}/>
+        <Game numOfPlayers={numberOfPlayers} difficulty={difficulty} onBackToHome={handleBackToHome}/>
       </div>
     )
   );

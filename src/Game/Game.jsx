@@ -7,7 +7,10 @@ import Winning from "../Components/Winning";
 import { GoHomeFill } from "react-icons/go";
 import { GrPowerReset } from "react-icons/gr";
 
-const Game = ({ list, size, numOfPlayers, pairs, onBackToHome }) => {
+const Game = ({ numOfPlayers, onBackToHome, difficulty }) => {
+
+  const { pairs, list, size } = difficulty;
+
   //logica de el jeugo en si
   const [shuffledCards, setShuffledCards] = useState([]);
   const [cardFlipped, setCardFlipped] = useState(null);
