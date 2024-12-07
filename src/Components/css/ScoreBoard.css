@@ -63,8 +63,7 @@
   align-self: flex-start;
   margin-left: auto;
   cursor: pointer;
-  font-size: 13px;
-  box-sizing: border-box;
+  display: flex;
 }
 
 .screen {

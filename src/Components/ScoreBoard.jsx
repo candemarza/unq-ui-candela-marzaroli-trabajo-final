@@ -1,8 +1,6 @@
-import React from "react";
 import "./css/ScoreBoard.css";
 import Time from "./Time";
 import { IoClose } from "react-icons/io5";
-import { useState } from "react";
 
 const ScoreBoard = ({ score, score2, numOfPlayers, player1turn, updateTime, gameOver }) => {
 

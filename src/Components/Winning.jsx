@@ -1,4 +1,3 @@
-import React from "react";
 import "./css/Winning.css";
 import { GoHomeFill } from "react-icons/go";
 import { IoClose } from "react-icons/io5";

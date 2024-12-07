@@ -1,5 +1,4 @@
 import "./css/Paint.css";
-import React from "react";
 import { FaRegWindowMinimize, FaRegWindowRestore } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 

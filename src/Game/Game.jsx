@@ -1,4 +1,3 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import "./Game.css";
 import Card from "../Components/Card";
@@ -33,14 +32,14 @@ const Game = ({ numOfPlayers, onBackToHome, difficulty }) => {
         matched: false,
       }))
     );
-    setScore(0);  //vuelvo a poner tod en estado inciial para resetear
+    setScore(0);  //vuelvo a poner todo en estado incial para  el boton de resetear, igual ta raro
     setScore2(0);
     setPlayer1Turn(true);
     setGameOver(false);
     setCardFlipped(null);
     setGameOver(false);
     setIsShowing(false);
-    setTime(0); 
+    setTime(null); 
   }, [restart]);
 
   const shuffle = (array) => {
