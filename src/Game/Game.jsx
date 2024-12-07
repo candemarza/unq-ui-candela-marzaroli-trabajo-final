@@ -4,7 +4,6 @@ import Card from "../Components/Card";
 import ScoreBoard from "../Components/ScoreBoard";
 import Winning from "../Components/Winning";
 import { GoHomeFill } from "react-icons/go";
-import { GrPowerReset } from "react-icons/gr";
 
 const Game = ({ numOfPlayers, onBackToHome, difficulty }) => {
 
@@ -18,8 +17,7 @@ const Game = ({ numOfPlayers, onBackToHome, difficulty }) => {
   const [score2, setScore2] = useState(0);
   const [player1turn, setPlayer1Turn] = useState(true);
   const [gameOver, setGameOver] = useState(false);
-  const [restart, setRestart] = useState(false);
-  const [time, setTime] = useState(null);
+  const [time, setTime] = useState(null); 
 
   useEffect(() => {
     //set de inicio de juego
@@ -32,15 +30,7 @@ const Game = ({ numOfPlayers, onBackToHome, difficulty }) => {
         matched: false,
       }))
     );
-    setScore(0);  //vuelvo a poner todo en estado incial para  el boton de resetear, igual ta raro
-    setScore2(0);
-    setPlayer1Turn(true);
-    setGameOver(false);
-    setCardFlipped(null);
-    setGameOver(false);
-    setIsShowing(false);
-    setTime(null); 
-  }, [restart]);
+  }, []);
 
   const shuffle = (array) => {
     //cosa de matematica para mezclarlas
@@ -113,18 +103,11 @@ const Game = ({ numOfPlayers, onBackToHome, difficulty }) => {
     }
   };
 
-  const handleRestart = () => {
-    setRestart(!restart);
-  };
-
   return (
     <>
       <div className="game-container">
         <div className="scoreBoard-container">
           <div className="control-buttons">
-            <div className="restart-button" onClick={handleRestart}>
-              <GrPowerReset />
-            </div>
             <div className="back-button" onClick={onBackToHome}>
               <GoHomeFill />
             </div>
@@ -156,7 +139,6 @@ const Game = ({ numOfPlayers, onBackToHome, difficulty }) => {
       {gameOver && (
         <Winning
           winner={winner()}
-          onRestart={handleRestart}
           onBackToHome={onBackToHome}
           time={time}
         />
