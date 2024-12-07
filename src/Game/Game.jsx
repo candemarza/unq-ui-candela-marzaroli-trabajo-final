@@ -20,6 +20,7 @@ const Game = ({ numOfPlayers, onBackToHome, difficulty }) => {
   const [player1turn, setPlayer1Turn] = useState(true);
   const [gameOver, setGameOver] = useState(false);
   const [restart, setRestart] = useState(false);
+  const [time, setTime] = useState(null);
 
   useEffect(() => {
     //set de inicio de juego
@@ -39,6 +40,7 @@ const Game = ({ numOfPlayers, onBackToHome, difficulty }) => {
     setCardFlipped(null);
     setGameOver(false);
     setIsShowing(false);
+    setTime(0); 
   }, [restart]);
 
   const shuffle = (array) => {
@@ -93,6 +95,10 @@ const Game = ({ numOfPlayers, onBackToHome, difficulty }) => {
     }
   };
 
+  const updateTime = (newTime) => {
+    setTime(newTime + 1);
+  }
+
   useEffect(() => {
     setGameOver(score + score2 === pairs);
   }, [score, score2]);
@@ -129,6 +135,8 @@ const Game = ({ numOfPlayers, onBackToHome, difficulty }) => {
             score2={score2}
             numOfPlayers={numOfPlayers}
             player1turn={player1turn}
+            updateTime={updateTime}
+            gameOver={gameOver}
           />
         </div>
         <div className="board-container">
@@ -151,6 +159,7 @@ const Game = ({ numOfPlayers, onBackToHome, difficulty }) => {
           winner={winner()}
           onRestart={handleRestart}
           onBackToHome={onBackToHome}
+          time={time}
         />
       )}
     </>
