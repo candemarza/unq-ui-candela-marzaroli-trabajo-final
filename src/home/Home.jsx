@@ -99,7 +99,7 @@ const Home = () => { //elegir como jugar y empezar
     gameState === "home" ? (
     <div className="background-home">
     <Paint>
-        <h1 className="title">Memotest</h1>
+        <h1 className="title">Memo-Hex</h1>
         <h2 className="subtitle">Find the matching css standar color and it's hexcode! </h2>
          <div className="options"> 
           <div className="difficulty">
