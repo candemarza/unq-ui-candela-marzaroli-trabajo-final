@@ -8,12 +8,12 @@ const Home = () => { //elegir como jugar y empezar
   const [numberOfPlayers, setNumberOfPlayers] = useState(1);
   const [gameState, setGameState] = useState("home");
   const [difficulty, setDifficulty] = useState(null);
-  const [pairs, setPairs] = useState(8);
+  const [pairs, setPairs] = useState(8); //esto es para poder mostrar el boton seleccionado
 
 
   const selectDifficulty = (difficulty) => () => {
     setDifficulty(difficulty);
-    setPairs(difficulty.pairs);
+    setPairs(difficulty.pairs); 
   }
 
   const selectNumberOfPlayers = (num) => () => {

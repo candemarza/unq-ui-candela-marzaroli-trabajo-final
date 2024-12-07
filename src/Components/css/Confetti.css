@@ -1,9 +1,6 @@
 @keyframes fall {
     0% {
       transform: translateY(-100vh) translateX(-20vw) rotate(0deg);
-      opacity: 0;
-    }
-    10% {
       opacity: 1;
     }
     100% {

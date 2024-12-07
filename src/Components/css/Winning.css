@@ -99,7 +99,6 @@
 }
 
 .win-title-bar {
-  /* buscar font pixeleada */
   display: flex;
   align-items: center;
   height: 35px;
@@ -135,7 +134,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /*mover la fuckin cruzzzz*/
 }
 
 .win-screen {

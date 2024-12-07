@@ -35,16 +35,6 @@
   transform: translateX(30px) translateY(30px);
 }
 
-@media (max-width: 666px) {
-  .second-player{
-  }
-}
-
-@media (max-width: 666px) {
-  .score-board{
-  }
-}
-
 .title-bar { /* buscar font pixeleada */
   display: flex;
   align-items: center;

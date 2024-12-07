@@ -23,7 +23,7 @@ const Game = ({ numOfPlayers, onBackToHome, difficulty }) => {
 
   useEffect(() => {
     //set de inicio de juego
-    const shuffledList = list;
+    const shuffledList = shuffle(list);
     setShuffledCards(
       shuffledList.map((color, i) => ({
         index: i,
@@ -32,7 +32,7 @@ const Game = ({ numOfPlayers, onBackToHome, difficulty }) => {
         matched: false,
       }))
     );
-    setScore(0); //ta feo
+    setScore(0);  //vuelvo a poner tod en estado inciial para resetear
     setScore2(0);
     setPlayer1Turn(true);
     setGameOver(false);
@@ -51,15 +51,11 @@ const Game = ({ numOfPlayers, onBackToHome, difficulty }) => {
   };
 
   const handleCardFlip = (card) => {
-    //que pasa cuando jeugo
-
     //muestro la carta girada
     const newFlippedCard = { ...card, flipped: true };
-    const boardCopy = [...shuffledCards];
-    boardCopy[card.index] = { ...boardCopy[card.index], flipped: true };
-    setShuffledCards(boardCopy);
+    shuffledCards[card.index] = { ...shuffledCards[card.index], flipped: true };
 
-    //si no hay otra carta girada, la guardo
+    //si no hay otra carta girada, la dejo
     if (!cardFlipped) {
       setCardFlipped(newFlippedCard);
       return;
@@ -71,20 +67,17 @@ const Game = ({ numOfPlayers, onBackToHome, difficulty }) => {
 
   const checkIfMatch = (card1, card2) => {
     if (card1.color.name === card2.color.value) {
-      setCardFlipped(null); //dejo las cartas giradas
       handleScore(); //sumo 1 al puntaje que corresponde
-      const boardCopy = [...shuffledCards];
-      boardCopy[card1.index] = { ...boardCopy[card1.index], matched: true };
-      boardCopy[card2.index] = { ...boardCopy[card2.index], matched: true };
-      setShuffledCards(boardCopy); //las marco que ya estan asi no joden
+      shuffledCards[card1.index] = { ...shuffledCards[card1.index], matched: true };
+      shuffledCards[card2.index] = { ...shuffledCards[card2.index], matched: true }; //las marco que ya estan asi no joden
+      setCardFlipped(null); 
+
     } else {
       setIsShowing(true); //para que no me deje girar otra carta antes de que se giren las dos
       setTimeout(() => {
         //giro ambas cartas, despues de 2 segundos
-        const boardCopy = [...shuffledCards];
-        boardCopy[card1.index] = { ...boardCopy[card1.index], flipped: false };
-        boardCopy[card2.index] = { ...boardCopy[card2.index], flipped: false };
-        setShuffledCards(boardCopy);
+        shuffledCards[card1.index] = { ...shuffledCards[card1.index], flipped: false };
+        shuffledCards[card2.index] = { ...shuffledCards[card2.index], flipped: false };
         setCardFlipped(null); //volvemos a iniciar
         setIsShowing(false);
         setPlayer1Turn(!player1turn); //cambio de jugador si perdi
