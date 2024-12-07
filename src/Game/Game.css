@@ -90,6 +90,17 @@
     grid-template-columns: repeat(8, 1fr);
 }
 
+@media (max-width: 900px) {
+    /*tenes scroll pero se puede leer*/
+    .sixBySix{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .eightByEight{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
 .back-button, .restart-button{
     width: 40px;
     height: 40px;
