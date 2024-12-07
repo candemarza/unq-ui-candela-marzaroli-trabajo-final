@@ -2,7 +2,7 @@ import "./css/ScoreBoard.css";
 import Time from "./Time";
 import { IoClose } from "react-icons/io5";
 
-const ScoreBoard = ({ score, score2, numOfPlayers, player1turn, updateTime, gameOver }) => {
+const ScoreBoard = ({ score, score2, numOfPlayers, player1turn, updateTime, gameOver, isActive, toggleTimer }) => {
 
   return (
     <>
@@ -55,7 +55,7 @@ const ScoreBoard = ({ score, score2, numOfPlayers, player1turn, updateTime, game
               <IoClose />
             </div>
           </div>
-           <Time updateTime={updateTime} gameOver={gameOver}/>
+            <Time updateTime={updateTime} gameOver={gameOver} isActive={isActive} toggleTimer={toggleTimer} />
         </div>
       )}
     </>

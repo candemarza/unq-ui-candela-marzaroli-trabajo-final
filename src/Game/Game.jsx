@@ -18,6 +18,7 @@ const Game = ({ numOfPlayers, onBackToHome, difficulty }) => {
   const [player1turn, setPlayer1Turn] = useState(true);
   const [gameOver, setGameOver] = useState(false);
   const [time, setTime] = useState(null); 
+  const [isActive, setIsActive] = useState(true);
 
   useEffect(() => {
     //set de inicio de juego
@@ -42,6 +43,7 @@ const Game = ({ numOfPlayers, onBackToHome, difficulty }) => {
   };
 
   const handleCardFlip = (card) => {
+    if (!isActive) return;
     //muestro la carta girada
     const newFlippedCard = { ...card, flipped: true };
     shuffledCards[card.index] = { ...shuffledCards[card.index], flipped: true };
@@ -88,6 +90,10 @@ const Game = ({ numOfPlayers, onBackToHome, difficulty }) => {
     setTime(newTime + 1);
   }
 
+  const toggleTimer = () => {
+    setIsActive(!isActive);
+  };
+
   useEffect(() => {
     setGameOver(score + score2 === pairs);
   }, [score, score2]);
@@ -119,6 +125,8 @@ const Game = ({ numOfPlayers, onBackToHome, difficulty }) => {
             player1turn={player1turn}
             updateTime={updateTime}
             gameOver={gameOver}
+            isActive={isActive}
+            toggleTimer={toggleTimer}
           />
         </div>
         <div className="board-container">

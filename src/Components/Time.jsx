@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 
-const Time = ({ updateTime, gameOver }) => {
+const Time = ({ updateTime, gameOver, isActive, toggleTimer }) => {
   const [seconds, setSeconds] = useState(0);
-  const [isActive, setIsActive] = useState(true);
 
   useEffect(() => {
     if (!isActive || gameOver) return;
@@ -16,8 +15,6 @@ const Time = ({ updateTime, gameOver }) => {
     return () => clearInterval(interval);
   }, [isActive, gameOver]);
 
-  const toggle = () => setIsActive(!isActive);
-
   return (
     <div className="screen">
       {isActive ? (
@@ -25,7 +22,7 @@ const Time = ({ updateTime, gameOver }) => {
       ) : (
         <div className="score">🌸 Game paused !</div>
       )}
-      <div className="score-button" onClick={toggle}>
+      <div className="score-button" onClick={toggleTimer}>
         {isActive ? "Pause" : "Start"}
       </div>
     </div>
