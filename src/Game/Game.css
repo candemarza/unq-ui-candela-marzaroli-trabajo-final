@@ -6,71 +6,14 @@
     gap: 2rem;
 }
 
-@media (max-width: 900px) {
-    .game-container{
-        flex-direction: column;
-        justify-content: flex-start;
-        gap: 0;
-    }
-}
-
-@media (max-width: 700px) {
-    .game-container{
-        width: 90vw;
-        gap: 0;
-    }
-}
-
 .scoreBoard-container{
     align-content: center;
-}
-
-@media (max-width: 1100px) {
-    .scoreBoard-container{
-        align-content: flex-start;
-        margin-top: 20px;
-    }
-}
-
-@media (max-width: 700px) {
-    .scoreBoard-container{
-        margin-top: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .scoreBoard-container{
-        margin-top: 70px;
-    }
 }
 
 .board-container{
     height: 95%;
     aspect-ratio: 1 / 1;
 }
-
-@media (max-width: 1100px) {
-    .board-container{
-        margin-top: 25px;
-        width: 75%;
-    }
-}
-
-
-@media (max-width: 700px) {
-    .board-container{
-        margin-top: 5px;
-        width: 90%;
-    }
-}
-
-@media (max-width: 550px) {
-    .board-container{
-        margin-top: 20px;
-        width: 98%;
-    }
-}
-
 
 .board{
     display: grid;
@@ -90,17 +33,6 @@
     grid-template-columns: repeat(8, 1fr);
 }
 
-@media (max-width: 900px) {
-    /*tenes scroll pero se puede leer*/
-    .sixBySix{
-        grid-template-columns: repeat(4, 1fr);
-    }
-    .eightByEight{
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-
 .back-button, .restart-button{
     width: 40px;
     height: 40px;
@@ -115,13 +47,6 @@
     cursor: pointer;
 }
 
-@media (max-width: 1100px) {
-    .back-button, .restart-button{
-        width: 30px;
-        height: 30px;
-    }
-}
-
 .control-buttons{
     display: flex;
     padding: 40px;
@@ -132,9 +57,61 @@
 }
 
 @media (max-width: 1100px) {
+    .back-button, .restart-button{
+        width: 30px;
+        height: 30px;
+    }
     .control-buttons{
         padding: 20px;
     }
+    .board-container{
+        margin-top: 25px;
+        width: 75%;
+    }
+    .scoreBoard-container{
+        align-content: flex-start;
+        margin-top: 20px;
+    }
 }
 
+@media (max-width: 900px) {
+    /*tenes scroll pero se puede leer*/
+    .sixBySix{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .eightByEight{
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .game-container{
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 0;
+    }
+}
 
+@media (max-width: 700px) {
+    .board-container{
+        margin-top: 5px;
+        width: 90%;
+    }
+    .scoreBoard-container{
+        margin-top: 10px;
+    }
+    .game-container{
+        width: 90vw;
+        gap: 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .board-container{
+        margin-top: 20px;
+        width: 98%;
+    }
+}
+
+@media (max-width: 480px) {
+    .scoreBoard-container{
+        margin-top: 70px;
+    }
+}

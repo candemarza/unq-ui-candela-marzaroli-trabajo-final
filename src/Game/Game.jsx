@@ -68,7 +68,7 @@ const Game = ({ numOfPlayers, onBackToHome, difficulty }) => {
     } else {
       setIsShowing(true); //para que no me deje girar otra carta antes de que se giren las dos
       setTimeout(() => {
-        //giro ambas cartas, despues de 2 segundos
+        //giro ambas cartas, despues de 1 segundo
         shuffledCards[card1.index] = { ...shuffledCards[card1.index], flipped: false };
         shuffledCards[card2.index] = { ...shuffledCards[card2.index], flipped: false };
         setCardFlipped(null); //volvemos a iniciar

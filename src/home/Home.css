@@ -18,23 +18,11 @@
     margin: 0px;
 }
 
-@media (max-width: 666px) {
-    .title{
-        font-size: 35px;
-    }
-}
-
 .subtitle{
     font-family: 'tanpearl';
     font-size: 20px;
     color: #0d002e;
     margin: 14px 3px;
-}
-
-@media (max-width: 666px) {
-    .subtitle{
-        font-size: 16px;
-    }
 }
 
 .options{
@@ -45,26 +33,17 @@
     gap: 15px;
 }
 
-@media (max-width: 666px) {
-    .options{
-        gap: 10px;
-        width: 90%;
-    }
-}
-
 .difficulty{
     display: flex;
     width: 100%;
     gap: 10px;
 }
 
-
 .numberOfPlayers{
     display: flex;
     width: 100%;
     gap: 10px;
 }
-
 
 .button{
     font-family: 'tanpearl';
@@ -76,13 +55,6 @@
     cursor: pointer;
     box-shadow: 4px 4px #0d002e7a;
     font-size: 15px;
-}
-
-@media (max-width: 666px) {
-    .button{
-        font-size: 12px;
-        padding:6px 0px;
-    }
 }
 
 .button:hover{
@@ -104,4 +76,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 666px) {
+    .button{
+        font-size: 12px;
+        padding:6px 0px;
+    }
+    .title{
+        font-size: 35px;
+    }
+    .options{
+        gap: 10px;
+        width: 90%;
+    }
+    .subtitle{
+        font-size: 16px;
+    }
 }

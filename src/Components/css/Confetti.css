@@ -9,7 +9,6 @@
     }
   }
 
-
 .confetti {
     position: absolute;
     top: 0;
@@ -34,7 +33,6 @@
 .con-6, .con-14 {  animation-delay: 1.25s; }
 .con-7, .con-15 {  animation-delay: 1.5s; }
 .con-8, .con-16 {  animation-delay: 1.75s; }
-
 
 .con-1 { left: 6.25%; }
 .con-2 { left: 12.5%; }
