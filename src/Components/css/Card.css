@@ -63,7 +63,7 @@
 }
 
 .match{
-    transform: rotateY(180deg) translateX(-6px) scale(0.7);
+    transform: rotateY(180deg) translateX(-6px) scale(0.8) ; 
 }
 
 
